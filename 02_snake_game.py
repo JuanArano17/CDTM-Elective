@@ -2,6 +2,7 @@ import streamlit as st
 import random
 import time
 import numpy as np
+import streamlit.components.v1 as components
 
 # Game configuration
 BOARD_SIZE = 20
@@ -15,6 +16,7 @@ def init_game():
     st.session_state.score = 0
     st.session_state.game_over = False
     st.session_state.game_started = False
+    st.session_state.last_key = None
 
 def generate_food():
     while True:
@@ -59,6 +61,79 @@ def move_snake():
     else:
         # Remove tail if no food eaten
         st.session_state.snake.pop()
+
+def handle_key_input():
+    """Handle keyboard input from JavaScript and update direction"""
+    if not st.session_state.game_started or st.session_state.game_over:
+        return False
+    
+    key = st.session_state.get('last_key', None)
+    if not key:
+        return False
+    
+    moved = False
+    if key == "w" or key == "W":
+        if st.session_state.direction != "DOWN":
+            st.session_state.direction = "UP"
+            moved = True
+    elif key == "s" or key == "S":
+        if st.session_state.direction != "UP":
+            st.session_state.direction = "DOWN"
+            moved = True
+    elif key == "a" or key == "A":
+        if st.session_state.direction != "RIGHT":
+            st.session_state.direction = "LEFT"
+            moved = True
+    elif key == "d" or key == "D":
+        if st.session_state.direction != "LEFT":
+            st.session_state.direction = "RIGHT"
+            moved = True
+    elif key == " ":  # Spacebar for auto move
+        moved = True
+    
+    if moved:
+        move_snake()
+        st.session_state.last_key = None  # Clear the key after processing
+        return True
+    
+    return False
+
+def create_keyboard_listener():
+    """Create JavaScript keyboard event listener"""
+    keyboard_js = """
+    <script>
+    document.addEventListener('keydown', function(event) {
+        // Prevent default behavior for WASD keys and spacebar
+        if(['w', 'W', 'a', 'A', 's', 'S', 'd', 'D', ' '].includes(event.key)) {
+            event.preventDefault();
+        }
+        
+        // Send key to Streamlit
+        if(['w', 'W', 'a', 'A', 's', 'S', 'd', 'D', ' '].includes(event.key)) {
+            // Use query parameter to send key to streamlit
+            const url = new URL(window.location);
+            url.searchParams.set('key', event.key);
+            window.history.replaceState({}, '', url);
+            
+            // Trigger a rerun by dispatching a custom event
+            window.parent.postMessage({
+                type: 'streamlit:setComponentValue',
+                value: event.key
+            }, '*');
+        }
+    });
+    
+    // Focus the window to capture keyboard events
+    window.focus();
+    </script>
+    <div style="text-align: center; padding: 20px; background: #f0f0f0; border-radius: 10px; margin: 10px 0;">
+        <h3>🎮 Game Controls Active</h3>
+        <p>Use <strong>WASD Keys</strong> to control the snake!</p>
+        <p><strong>W</strong> (up), <strong>A</strong> (left), <strong>S</strong> (down), <strong>D</strong> (right), or <strong>Spacebar</strong> to move forward</p>
+        <small>Make sure this window is focused to capture key presses</small>
+    </div>
+    """
+    return keyboard_js
 
 def create_board():
     # Create empty board
@@ -108,6 +183,17 @@ st.set_page_config(page_title="🐍 Snake Game", layout="centered")
 # Title
 st.title("🐍 Snake Game")
 
+# Check for keyboard input from URL parameters
+query_params = st.query_params
+if 'key' in query_params:
+    st.session_state.last_key = query_params['key']
+    # Clear the query parameter
+    del st.query_params['key']
+
+# Handle keyboard input
+if handle_key_input():
+    st.rerun()
+
 # Game info
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -123,9 +209,15 @@ if not st.session_state.game_started:
         st.session_state.game_started = True
         st.rerun()
 
+# Keyboard controls (only show when game is active)
 if st.session_state.game_started and not st.session_state.game_over:
-    # Direction controls
-    st.write("**Controls:**")
+    # JavaScript keyboard listener
+    keyboard_html = create_keyboard_listener()
+    components.html(keyboard_html, height=150)
+
+if st.session_state.game_started and not st.session_state.game_over:
+    # Direction controls (backup buttons)
+    st.write("**Backup Button Controls:**")
     col1, col2, col3, col4, col5 = st.columns(5)
     
     with col1:
@@ -203,15 +295,21 @@ st.write("---")
 st.markdown("""
 **How to Play:**
 1. Click "Start Game" to begin
-2. Use the arrow buttons to control the snake
-3. Eat the red food to grow and increase your score
-4. Avoid hitting walls or yourself
-5. Try to get the highest score possible!
+2. **Use WASD keys to control the snake** ⌨️ (focus the controls area above)
+3. Alternatively, use the backup buttons below
+4. Eat the red food to grow and increase your score
+5. Avoid hitting walls or yourself
+6. Try to get the highest score possible!
+
+**Keyboard Controls:**
+- **WASD Keys**: W (up), A (left), S (down), D (right)
+- **Spacebar**: Move forward in current direction
 
 **Tips:**
-- The snake moves in the direction of the last button pressed
+- Make sure the browser window is focused to capture keyboard events
+- The snake moves in the direction of the last key pressed
 - You cannot move directly opposite to your current direction
-- Use "Auto Move" for continuous movement in the current direction
+- Use "Auto Move" button or spacebar for continuous movement in the current direction
 - Enable "Auto-play mode" for automatic continuous movement
 
 **Scoring:**
