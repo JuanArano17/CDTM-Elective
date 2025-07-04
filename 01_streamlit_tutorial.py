@@ -115,7 +115,7 @@ elif page == "🎮 2. Input Widgets":
     st.header("2. Input Widgets")
 
     # Text inputs
-    text_input = st.text_input("Enter some text:", "Default value")
+    name = st.text_input("Enter your name:", "Default value")
     text_area = st.text_area("Enter multiple lines:", "Default\ntext")
     password = st.text_input("Enter password:", type="password")
 
