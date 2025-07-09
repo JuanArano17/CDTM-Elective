@@ -1,361 +1,301 @@
-# 🎯 Streamlit & GitHub Tutorial
+# 🏃‍♂️💪 Rep&Run - Hybrid Athlete Training Platform
 
-> A comprehensive hands-on tutorial for learning Streamlit web app development and GitHub collaboration
+A comprehensive training application for hybrid athletes that combines running and strength training with nutrition tracking, heart rate monitoring, route discovery, and music recommendations.
 
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
+## 🚀 Features
 
-## 📋 Table of Contents
+### 🏃‍♂️ Running Session Management
+- **Session Types**: Fartlek, Intervals, Long Run, Recovery Run, Easy Run, Tempo Run
+- **Metrics Tracking**: Duration, distance, pace (avg/max), heart rate (avg/max)
+- **GPS Integration**: Interactive route maps with Folium
+- **Training Journal**: Personal notes and perceived effort logging
+- **Session History**: View, edit, and delete previous sessions
 
-- [🎯 Overview](#-overview)
-- [🚀 Quick Start](#-quick-start)
-- [📦 What's Included](#-whats-included)
-- [🛠️ Installation](#️-installation)
-- [🎮 Running the Apps](#-running-the-apps)
-- [📚 Learning Objectives](#-learning-objectives)
-- [🌟 Features](#-features)
-- [🤝 GitHub Tutorial](#-github-tutorial)
-- [📖 Streamlit Concepts](#-streamlit-concepts)
-- [🎓 Next Steps](#-next-steps)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
+### 💪 Strength Training Management
+- **Exercise Database**: Comprehensive library of compound, isolation, and functional exercises
+- **Workout Tracking**: Sets, reps, weight, rest time, RPE
+- **Muscle Group Targeting**: Track which muscle groups are being worked
+- **Progress Visualization**: Charts showing strength progression over time
+- **Routine Management**: Save and reuse workout routines
 
-## 🎯 Overview
+### 🥗 Nutrition & AI Meal Suggestions
+- **AI-Powered Recommendations**: Meal suggestions based on fitness goals
+- **Dietary Preferences**: Support for vegan, vegetarian, gluten-free, etc.
+- **Macro Tracking**: Protein, carbs, fat, and calorie monitoring
+- **Food Logging**: Manual entry with comprehensive nutrition database
+- **Daily Goals**: Visual progress tracking against nutrition targets
 
-This repository serves as a complete tutorial for learning **Streamlit** web application development and **GitHub** collaboration workflows. Whether you're a beginner looking to create your first web app or someone wanting to understand GitHub best practices, this tutorial has you covered!
+### ❤️ Heart Rate Zones
+- **Zone Calculator**: Automatic calculation based on age (220-age formula)
+- **5 Training Zones**: Recovery, Aerobic, Tempo, Threshold, Anaerobic
+- **Zone Analysis**: Time spent in each zone from running sessions
+- **Training Guide**: Detailed explanations of each zone's purpose
 
-### What You'll Learn
+### 🗺️ Routes & Gyms Discovery
+- **Running Routes**: Find popular routes by city with difficulty ratings
+- **Gym Locator**: Discover nearby gyms with ratings and addresses
+- **Interactive Maps**: Visual representation using Folium
+- **Travel-Friendly**: Perfect for athletes on the go
 
-- 🌐 **Streamlit Fundamentals**: Build interactive web applications with Python
-- 🔧 **GitHub Workflow**: Clone, commit, push, and collaborate on projects
-- 🎮 **Practical Applications**: See real-world examples and build a game
-- 📊 **Data Visualization**: Create charts, tables, and interactive dashboards
-- 🎨 **UI/UX Design**: Learn layout, styling, and user experience principles
+### 🎵 Music Recommendations
+- **Workout-Specific Playlists**: Curated for different training types
+- **Spotify Integration**: Ready for music platform connections
+- **Training Tips**: BPM recommendations for different workout intensities
+- **Motivation Boost**: High-energy tracks for maximum performance
 
-## 🚀 Quick Start
+### 📊 Progress Reports & Analytics
+- **Dashboard Overview**: Key metrics and recent activity
+- **Progress Charts**: Visual tracking of running pace and strength volume
+- **Weekly/Monthly Reports**: Comprehensive training analysis
+- **Trend Analysis**: Performance improvements over time
 
+## 🛠️ Technology Stack
+
+### Core Framework
+- **Streamlit**: Main web application framework
+- **Pandas**: Data manipulation and analysis
+- **NumPy**: Numerical computations
+
+### Visualization & Maps
+- **Plotly**: Interactive charts and graphs
+- **Folium**: Interactive maps and GPS visualization
+- **Matplotlib**: Additional plotting capabilities
+- **Seaborn**: Statistical data visualization
+
+### AI & External Integrations
+- **OpenAI**: AI-powered meal suggestions
+- **Spotipy**: Spotify music integration
+- **Geopy**: Geocoding and location services
+
+### Machine Learning
+- **Scikit-learn**: Data analysis and modeling
+- **Linear Regression**: Progress trend analysis
+
+### Utilities
+- **Requests**: HTTP library for API calls
+- **Python-dotenv**: Environment variable management
+- **JSON**: Data serialization
+
+## 📦 Installation
+
+1. **Clone the repository**:
 ```bash
-# 1. Clone this repository
-git clone https://github.com/yourusername/CDTM-Elective.git
+git clone <repository-url>
 cd CDTM-Elective
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Run the Streamlit showcase
-streamlit run streamlit_tutorial.py
-
-# 4. Or play the Snake game
-streamlit run snake_game.py
 ```
 
-## 📦 What's Included
-
-### 1. 🎯 Streamlit Tutorial (`streamlit_tutorial.py`)
-A comprehensive showcase of **all major Streamlit features** organized into interactive sections:
-
-| Section | Description | Key Features |
-|---------|-------------|--------------|
-| 🏠 **Home** | Welcome page and navigation guide | Overview, instructions |
-| 📝 **Text Elements** | Different ways to display content | Markdown, LaTeX, code blocks |
-| 🎮 **Input Widgets** | All user input controls | Sliders, buttons, text inputs |
-| 📐 **Layout & Containers** | Organizing your app structure | Columns, tabs, expanders |
-| 📊 **Data Display** | Tables and data presentation | DataFrames, metrics, JSON |
-| 📈 **Charts & Visualizations** | Built-in and advanced charts | Line, bar, scatter, Plotly |
-| 🎵 **Media Elements** | Images, audio, and video | File uploads, media display |
-| ⚠️ **Status Elements** | User feedback and notifications | Messages, progress bars |
-| 🔄 **Control Flow** | App logic and conditional display | Flow control, validation |
-| 💾 **Caching & Session State** | Performance and state management | Data caching, user sessions |
-| 📝 **Forms** | User input and data collection | Form handling, validation |
-| 📑 **Multi-page Apps** | Building complex applications | Navigation, page structure |
-| 🎨 **Custom Styling** | Design and appearance | CSS, HTML customization |
-| ⚡ **Advanced Features** | Dynamic content and interactions | Real-time updates, rerun |
-
-### 2. 🐍 Snake Game (`snake_game.py`)
-A fully functional **Snake game** built entirely with Streamlit, demonstrating:
-
-- **Game Logic**: Snake movement, collision detection, scoring
-- **Session State**: Persistent game state across interactions
-- **Interactive Controls**: Button-based game controls
-- **Real-time Updates**: Dynamic game board rendering
-- **Game Features**: Score tracking, high scores, auto-play mode
-- **CSS Styling**: Custom game board visualization
-
-## 🛠️ Installation
-
-### Prerequisites
-- Python 3.7 or higher
-- pip (Python package installer)
-
-### Dependencies
+2. **Install dependencies**:
 ```bash
-# Install all required packages
-pip install streamlit pandas numpy plotly Pillow
-
-# Or use the requirements file (if available)
 pip install -r requirements.txt
 ```
 
-### Manual Installation
-```bash
-pip install streamlit>=1.28.0
-pip install pandas>=1.5.0
-pip install numpy>=1.21.0
-pip install plotly>=5.0.0
-pip install Pillow>=8.0.0
+3. **Set up environment variables** (optional):
+Create a `.env` file with:
+```
+OPENAI_API_KEY=your_openai_api_key
+SPOTIFY_CLIENT_ID=your_spotify_client_id
+SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
 ```
 
-## 🎮 Running the Apps
-
-### 1. Streamlit Tutorial Showcase
+4. **Run the application**:
 ```bash
-streamlit run streamlit_tutorial.py
-```
-- Opens at `http://localhost:8501`
-- Use the sidebar to navigate between sections
-- Each section demonstrates specific Streamlit capabilities
-
-### 2. Snake Game
-```bash
-streamlit run snake_game.py
-```
-- Opens at `http://localhost:8501`
-- Click "Start Game" to begin
-- Use arrow buttons to control the snake
-- Try auto-play mode for hands-free gameplay
-
-### 3. Command Line Options
-```bash
-# Run on a specific port
-streamlit run streamlit_tutorial.py --server.port 8502
-
-# Run with custom configuration
-streamlit run snake_game.py --server.maxUploadSize 200
+streamlit run project.py
 ```
 
-## 📚 Learning Objectives
+## 🎯 Usage Guide
 
-By completing this tutorial, you will:
+### Getting Started
+1. **Profile Setup**: Navigate to "👤 Profile & Settings" to configure your personal information
+2. **Dashboard**: View your training overview and recent activity
+3. **Start Training**: Begin logging running and strength training sessions
 
-### Streamlit Skills
-- ✅ Understand Streamlit's core concepts and architecture
-- ✅ Create interactive web applications with Python
-- ✅ Implement user input handling and data processing
-- ✅ Build data visualizations and dashboards
-- ✅ Manage application state and user sessions
-- ✅ Deploy and share Streamlit applications
+### Running Sessions
+1. Go to "🏃‍♂️ Running Sessions"
+2. Select "➕ Add Session" tab
+3. Choose session type and enter metrics
+4. Add notes and perceived effort
+5. Save your session
 
-### GitHub Skills
-- ✅ Clone and fork repositories
-- ✅ Create branches and manage version control
-- ✅ Make commits with meaningful messages
-- ✅ Create pull requests and handle code reviews
-- ✅ Collaborate with other developers
-- ✅ Understand GitHub workflow best practices
+### Strength Training
+1. Navigate to "💪 Strength Training"
+2. Create new session with exercise details
+3. Track sets, reps, weight, and RPE
+4. View progress in the analytics tab
 
-## 🌟 Features
+### Nutrition Tracking
+1. Visit "🥗 Nutrition & AI Meals"
+2. Get AI-powered meal suggestions
+3. Log your daily food intake
+4. Monitor macro progress
 
-### Streamlit Tutorial Features
-- **📱 Responsive Design**: Works on desktop and mobile
-- **🎨 Modern UI**: Clean, intuitive interface
-- **🔍 Interactive Examples**: Hands-on demonstrations
-- **📝 Code Examples**: Copy-paste ready code snippets
-- **🎯 Section-based Learning**: Organized, progressive learning path
-- **💡 Best Practices**: Real-world implementation patterns
+### Heart Rate Training
+1. Go to "❤️ Heart Rate Zones"
+2. View your calculated zones
+3. Analyze zone distribution from running sessions
+4. Follow zone training guidelines
 
-### Snake Game Features
-- **🎮 Classic Gameplay**: Traditional snake game mechanics
-- **🏆 Score Tracking**: Current score and high score tracking
-- **🤖 Auto-play Mode**: Watch the AI play automatically
-- **📱 Mobile Friendly**: Touch-friendly button controls
-- **🎨 Custom Graphics**: CSS-styled game board
-- **🔄 Session Persistence**: Game state maintained across refreshes
+## 📱 Features in Detail
 
-## 🤝 GitHub Tutorial
+### Running Session Management
+- **6 Session Types**: Comprehensive training variety
+- **GPS Route Visualization**: Interactive maps with start/end markers
+- **Heart Rate Integration**: Zone-based training analysis
+- **Performance Metrics**: Pace tracking and improvement monitoring
 
-### Getting Started with GitHub
+### Strength Training Features
+- **Exercise Database**: 18+ exercises across 3 categories
+- **Muscle Group Tracking**: Targeted training analysis
+- **Volume Calculation**: Automatic total weight lifted computation
+- **RPE Integration**: Rate of Perceived Exertion tracking
 
-#### 1. **Clone the Repository**
-```bash
-# HTTPS
-git clone https://github.com/yourusername/CDTM-Elective.git
+### AI Nutrition System
+- **Goal-Based Suggestions**: Tailored to muscle gain, fat loss, or maintenance
+- **Dietary Accommodation**: Vegan, vegetarian, gluten-free support
+- **Macro Optimization**: Balanced nutrition recommendations
+- **Meal Variety**: Different suggestions for each meal type
 
-# SSH (if you have SSH keys set up)
-git clone git@github.com:yourusername/CDTM-Elective.git
-```
+### Heart Rate Zone Training
+- **Scientific Calculation**: 220-age formula implementation
+- **5 Training Zones**: Complete zone spectrum coverage
+- **Session Analysis**: Automatic zone time calculation
+- **Training Guidance**: Purpose and benefits of each zone
 
-#### 2. **Basic Git Commands**
-```bash
-# Check status
-git status
+### Location Services
+- **Route Discovery**: Popular running routes by city
+- **Gym Finder**: Local fitness facilities with ratings
+- **Interactive Maps**: Visual location representation
+- **Travel Support**: Perfect for mobile athletes
 
-# Add files
-git add .
-git add specific_file.py
+### Music Integration
+- **Workout-Specific Playlists**: 4 training categories
+- **Spotify Ready**: API integration prepared
+- **BPM Guidelines**: Tempo recommendations
+- **Motivation Focus**: High-energy track suggestions
 
-# Commit changes
-git commit -m "Add new Streamlit feature"
+## 🔧 Customization
 
-# Push to GitHub
-git push origin main
-```
-
-#### 3. **Branching and Collaboration**
-```bash
-# Create a new branch
-git checkout -b feature/new-widget
-
-# Switch between branches
-git checkout main
-git checkout feature/new-widget
-
-# Merge branches
-git checkout main
-git merge feature/new-widget
-```
-
-#### 4. **Making Your First Contribution**
-1. **Fork** this repository to your GitHub account
-2. **Clone** your fork to your local machine
-3. **Create** a new branch for your feature
-4. **Make** your changes and test them
-5. **Commit** your changes with a descriptive message
-6. **Push** your branch to your fork
-7. **Create** a Pull Request to the original repository
-
-### Best Practices
-- 📝 Write clear, descriptive commit messages
-- 🌿 Use feature branches for new developments
-- 🧪 Test your code before committing
-- 📚 Update documentation when needed
-- 🤝 Be responsive to code review feedback
-
-## 📖 Streamlit Concepts
-
-### Key Concepts Covered
-
-#### 1. **App Structure**
+### Adding New Exercises
+Edit the `EXERCISE_DATABASE` in the code:
 ```python
-import streamlit as st
-
-# Page configuration (must be first)
-st.set_page_config(page_title="My App", layout="wide")
-
-# Your app content
-st.title("Hello Streamlit!")
+EXERCISE_DATABASE = {
+    'Your Category': {
+        'Exercise Name': ['Muscle Group 1', 'Muscle Group 2']
+    }
+}
 ```
 
-#### 2. **Widget State Management**
+### Customizing Music Playlists
+Modify the `MUSIC_PLAYLISTS` dictionary:
 ```python
-# Session state for persistent data
-if 'counter' not in st.session_state:
-    st.session_state.counter = 0
-
-# Increment button
-if st.button("Increment"):
-    st.session_state.counter += 1
+MUSIC_PLAYLISTS = {
+    'Your Workout Type': [
+        'Playlist 1',
+        'Playlist 2'
+    ]
+}
 ```
 
-#### 3. **Caching for Performance**
+### Adding New Cities
+Extend the route and gym databases:
 ```python
-@st.cache_data
-def load_data():
-    # Expensive computation
-    return processed_data
+def find_running_routes(city):
+    routes = {
+        'Your City': [
+            {'name': 'Route Name', 'distance': '5.0 km', 'surface': 'Paved', 'difficulty': 'Easy'}
+        ]
+    }
 ```
 
-#### 4. **Layout and Organization**
-```python
-# Columns
-col1, col2 = st.columns(2)
-with col1:
-    st.write("Left column")
-with col2:
-    st.write("Right column")
+## 🚀 Future Enhancements
 
-# Sidebar
-st.sidebar.selectbox("Choose option", options)
-```
+### Planned Features
+- **Strava Integration**: Automatic workout sync
+- **Garmin/Polar Sync**: Device data import
+- **Social Features**: Training with friends
+- **Advanced Analytics**: Machine learning insights
+- **Mobile App**: Native iOS/Android versions
 
-## 🎓 Next Steps
+### API Integrations
+- **Google Maps API**: Enhanced route discovery
+- **Yelp API**: Real gym reviews and ratings
+- **OpenFoodFacts**: Comprehensive food database
+- **Weather API**: Training condition recommendations
 
-### Beginner Level
-1. 📖 Complete the Streamlit tutorial sections
-2. 🎮 Modify the Snake game (add features, change colors)
-3. 🔧 Create your first simple Streamlit app
-4. 📊 Build a basic data dashboard
+## 📊 Data Management
 
-### Intermediate Level
-1. 🌐 Deploy your app to Streamlit Cloud
-2. 🗃️ Connect to databases and APIs
-3. 📱 Create multi-page applications
-4. 🎨 Implement custom CSS and styling
+### Session Storage
+- **Running Sessions**: Date, type, metrics, notes
+- **Strength Sessions**: Exercise details, volume, RPE
+- **Nutrition Log**: Food entries, macros, goals
+- **User Profile**: Personal metrics and preferences
 
-### Advanced Level
-1. ⚡ Optimize app performance with caching
-2. 🔐 Add authentication and user management
-3. 📈 Build real-time data applications
-4. 🤖 Integrate machine learning models
+### Data Persistence
+- **Session State**: Streamlit's built-in state management
+- **Local Storage**: Browser-based data persistence
+- **Export Options**: CSV/JSON data export (planned)
 
-### Project Ideas
-- 📊 **Personal Finance Dashboard**: Track expenses and investments
-- 🌤️ **Weather App**: Display weather data with visualizations
-- 📝 **To-Do List Manager**: Task management with priorities
-- 🎵 **Music Recommendation System**: ML-powered music suggestions
-- 📈 **Stock Market Analyzer**: Real-time stock data analysis
+## 🎨 User Interface
+
+### Design Principles
+- **Clean & Modern**: Minimalistic interface design
+- **Dark Mode**: Default dark theme for better UX
+- **Responsive Layout**: Works on desktop and mobile
+- **Intuitive Navigation**: Easy-to-use sidebar menu
+
+### Visual Elements
+- **Interactive Charts**: Plotly-powered visualizations
+- **Progress Indicators**: Real-time goal tracking
+- **Color-Coded Zones**: Heart rate zone visualization
+- **Map Integration**: Folium-based location services
+
+## 🔒 Security & Privacy
+
+### Data Protection
+- **Local Storage**: No external data transmission
+- **Session-Based**: Temporary data storage
+- **No Personal Data**: No sensitive information collection
+- **GDPR Compliant**: Privacy-focused design
+
+### Future Security
+- **User Authentication**: OAuth2 implementation
+- **Data Encryption**: Sensitive data protection
+- **Cloud Storage**: Secure data backup
+- **API Security**: Secure external integrations
 
 ## 🤝 Contributing
 
-We welcome contributions from everyone! Here's how you can help:
+### Development Setup
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-### Ways to Contribute
-1. 🐛 **Report Bugs**: Found an issue? Open a GitHub issue
-2. 💡 **Suggest Features**: Have an idea? Create a feature request
-3. 📝 **Improve Documentation**: Help make the README clearer
-4. 🎨 **Add Examples**: Create new Streamlit demonstrations
-5. 🎮 **Enhance Games**: Add features to the Snake game
-6. 🧪 **Write Tests**: Help improve code quality
-
-### Contribution Process
-1. Check existing issues and pull requests
-2. Fork the repository
-3. Create a feature branch
-4. Make your changes
-5. Test thoroughly
-6. Submit a pull request
-
-### Code Style Guidelines
-- Use clear, descriptive variable names
-- Add comments for complex logic
-- Follow PEP 8 Python style guidelines
-- Include docstrings for functions
-- Keep functions small and focused
+### Code Standards
+- **Python PEP 8**: Code style compliance
+- **Docstrings**: Function documentation
+- **Type Hints**: Parameter type annotations
+- **Error Handling**: Robust exception management
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
-- 🎯 [Streamlit Team](https://streamlit.io/) for creating an amazing framework
-- 🐍 Python community for excellent libraries
-- 🤝 GitHub for providing collaboration tools
-- 📚 All contributors and learners using this tutorial
-
----
+- **Streamlit Team**: For the amazing web app framework
+- **Plotly**: Interactive visualization library
+- **Folium**: Python mapping library
+- **OpenAI**: AI-powered features
+- **Spotify**: Music integration capabilities
 
 ## 📞 Support
 
-- 📖 **Documentation**: [Streamlit Docs](https://docs.streamlit.io/)
-- 💬 **Community**: [Streamlit Community Forum](https://discuss.streamlit.io/)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/CDTM-Elective/issues)
-- 📧 **Contact**: [Your Email](mailto:your.email@example.com)
+For questions, issues, or feature requests:
+- Create an issue on GitHub
+- Contact the development team
+- Check the documentation
 
 ---
 
-**Happy coding! 🚀**
-
-*Built with ❤️ using Streamlit and GitHub*
+**🏃‍♂️💪 Rep&Run** - Empowering hybrid athletes to achieve their training goals with comprehensive tracking, AI-powered nutrition, and intelligent training insights.
