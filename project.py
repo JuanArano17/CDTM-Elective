@@ -5,21 +5,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 import folium
 from streamlit_folium import folium_static
-import json
-from datetime import datetime, date, timedelta
-import requests
-import openai
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
-from geopy.geocoders import Nominatim
-from geopy.distance import geodesic
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
-import os
-from dotenv import load_dotenv
+from datetime import date
 import random
-
+from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
@@ -542,31 +530,35 @@ if page == "🏠 Dashboard":
     if st.session_state.running_sessions:
         running_data = pd.DataFrame(st.session_state.running_sessions)
         if not running_data.empty and 'pace' in running_data.columns:
-            # Show only last 10 sessions, sorted by timestamp
-            running_data = running_data.sort_values('date').tail(10)
+            # Convert date to datetime and group by day
+            running_data['date'] = pd.to_datetime(running_data['date'])
+            running_data = running_data.sort_values('date')
+            running_data['date_only'] = running_data['date'].dt.date
+            daily_pace = running_data.groupby('date_only')['pace'].mean().reset_index()
             fig = px.bar(
-                running_data,
-                x='date',
+                daily_pace,
+                x='date_only',
                 y='pace',
-                title='Average Running Pace (min/km) - Last 10 Sessions',
-                labels={'date': 'Date & Time', 'pace': 'Avg Pace (min/km)'}
+                title='Average Running Pace (min/km) by Day',
+                labels={'date_only': 'Date', 'pace': 'Avg Pace (min/km)'}
             )
-            fig.update_layout(xaxis_tickformat='%Y-%m-%d %H:%M', yaxis=dict(autorange='reversed'))  # Lower pace is better
             st.plotly_chart(fig, use_container_width=True)
     
     if st.session_state.strength_sessions:
         strength_data = pd.DataFrame(st.session_state.strength_sessions)
         if not strength_data.empty and 'total_weight' in strength_data.columns:
-            # Show only last 10 sessions, sorted by timestamp
-            strength_data = strength_data.sort_values('date').tail(10)
+            # Convert date to datetime and group by day
+            strength_data['date'] = pd.to_datetime(strength_data['date'])
+            strength_data = strength_data.sort_values('date')
+            strength_data['date_only'] = strength_data['date'].dt.date
+            daily_weight = strength_data.groupby('date_only')['total_weight'].sum().reset_index()
             fig = px.bar(
-                strength_data,
-                x='date',
+                daily_weight,
+                x='date_only',
                 y='total_weight',
-                title='Total Weight Lifted (kg) - Last 10 Sessions',
-                labels={'date': 'Date & Time', 'total_weight': 'Total Weight (kg)'}
+                title='Total Weight Lifted (kg) by Day',
+                labels={'date_only': 'Date', 'total_weight': 'Total Weight (kg)'}
             )
-            fig.update_layout(xaxis_tickformat='%Y-%m-%d %H:%M')
             st.plotly_chart(fig, use_container_width=True)
 
 # =============================================================================
@@ -586,6 +578,7 @@ elif page == "🏃‍♂️ Running Sessions":
             session_type = st.selectbox("Session Type", RUNNING_TYPES)
             duration = st.number_input("Duration (minutes)", min_value=1, value=30)
             distance = st.number_input("Distance (km)", min_value=0.1, value=5.0, step=0.1)
+            session_date = st.date_input("Session Date", value=date.today())
         
         with col2:
             # Calculate average pace (min/km) if distance > 0
@@ -604,7 +597,7 @@ elif page == "🏃‍♂️ Running Sessions":
         if st.button("Save Running Session"):
             session = {
                 'id': len(st.session_state.running_sessions) + 1,
-                'date': datetime.now().isoformat(sep=' ', timespec='seconds'),
+                'date': str(session_date),
                 'type_name': session_type,
                 'duration': duration,
                 'distance': distance,
@@ -657,9 +650,9 @@ elif page == "💪 Strength Training":
         st.subheader("Create New Strength Training Session")
         
         routine_name = st.text_input("Routine Name", value="Upper Body")
-        
         exercise_type = st.selectbox("Exercise Type", list(EXERCISE_DATABASE.keys()))
         exercise_name = st.selectbox("Exercise", list(EXERCISE_DATABASE[exercise_type].keys()))
+        session_date = st.date_input("Session Date", value=date.today(), key="strength_date")
         
         col1, col2, col3 = st.columns(3)
         
@@ -678,7 +671,7 @@ elif page == "💪 Strength Training":
         if st.button("Save Strength Session"):
             session = {
                 'id': len(st.session_state.strength_sessions) + 1,
-                'date': datetime.now().isoformat(sep=' ', timespec='seconds'),
+                'date': str(session_date),
                 'routine_name': routine_name,
                 'exercise_type': exercise_type,
                 'exercise_name': exercise_name,
