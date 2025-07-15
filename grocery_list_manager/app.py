@@ -44,17 +44,24 @@ def save_lists_to_csv(lists):
     df.to_csv(LISTS_CSV, index=False)
 
 def load_lists_from_csv():
-    if not os.path.exists(LISTS_CSV):
+    if not os.path.exists(LISTS_CSV) or os.path.getsize(LISTS_CSV) == 0:
         return {}
     df = pd.read_csv(LISTS_CSV)
     lists = {}
     for _, row in df.iterrows():
         list_id = str(row["list_id"])
         if list_id not in lists:
+            # Parse last_edited as datetime if possible
+            last_edited = row["last_edited"] if not pd.isna(row["last_edited"]) else None
+            try:
+                if last_edited:
+                    last_edited = pd.to_datetime(last_edited)
+            except Exception:
+                pass
             lists[list_id] = {
                 "name": row["list_name"],
                 "items": [],
-                "last_edited": row["last_edited"] if not pd.isna(row["last_edited"]) else None,
+                "last_edited": last_edited,
             }
         if pd.notna(row["item_name"]) and row["item_name"]:
             lists[list_id]["items"].append({
@@ -82,7 +89,13 @@ def save_and_rerun():
 
 # --- Helper Functions ---
 def get_last_edited(list_obj):
-    return list_obj.get("last_edited", datetime.min)
+    le = list_obj.get("last_edited", datetime.min)
+    if isinstance(le, str):
+        try:
+            le = pd.to_datetime(le)
+        except Exception:
+            le = datetime.min
+    return le
 
 def update_last_edited(list_id):
     lists = get_lists()
@@ -171,7 +184,7 @@ else:
                         save_and_rerun()
             else:
                 st.markdown(f"## {grocery_list['name']}")
-                st.markdown(f"**Estimated price: ${estimated_total:.2f}**")
+                st.markdown(f"**Estimated: ${estimated_total:.2f}**")
                 with st.expander("Show price breakdown"):
                     for name, price in price_details:
                         st.write(f"{name}: ${price:.2f}")
