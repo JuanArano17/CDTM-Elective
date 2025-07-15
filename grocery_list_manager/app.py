@@ -102,18 +102,21 @@ else:
                 st.write("")
                 add_item_btn = st.form_submit_button("Add Item")
             if add_item_btn and item_name.strip() and area.strip():
-                # Merge logic with unit conversion
+                # Always convert to base units before adding/merging
                 def get_pint_unit(unit):
                     if unit == "kg": return ureg.kilogram
                     if unit == "g": return ureg.gram
                     if unit == "l": return ureg.liter
                     if unit == "ml": return ureg.milliliter
                     return None
-                base_unit = None
-                if unit in ["kg", "g"]:
-                    base_unit = "kg"
-                elif unit in ["l", "ml"]:
+                base_unit = unit
+                base_qty = quantity
+                if unit == "ml":
+                    base_qty = (quantity * ureg.milliliter).to("liter").magnitude
                     base_unit = "l"
+                elif unit == "g":
+                    base_qty = (quantity * ureg.gram).to("kilogram").magnitude
+                    base_unit = "kg"
                 # Try to merge with compatible units
                 found = False
                 for item in grocery_list["items"]:
@@ -123,34 +126,34 @@ else:
                     ):
                         # Check if units are compatible
                         item_pint_unit = get_pint_unit(item["unit"])
-                        new_pint_unit = get_pint_unit(unit)
-                        if item_pint_unit and new_pint_unit and base_unit:
+                        new_pint_unit = get_pint_unit(base_unit)
+                        if item_pint_unit and new_pint_unit and base_unit in ["kg", "l"]:
                             # Convert both to base unit
                             item_qty = (item["quantity"] * item_pint_unit).to(base_unit).magnitude
-                            new_qty = (quantity * new_pint_unit).to(base_unit).magnitude
+                            new_qty = base_qty
                             item["quantity"] = item_qty + new_qty
                             item["unit"] = base_unit
                             found = True
                             break
-                        elif item["unit"] == unit:
-                            item["quantity"] += quantity
+                        elif item["unit"] == base_unit:
+                            item["quantity"] += base_qty
                             found = True
                             break
                 if not found:
                     grocery_list["items"].append({
                         "name": item_name.strip(),
                         "area": area.strip(),
-                        "quantity": quantity,
-                        "unit": unit,
+                        "quantity": base_qty,
+                        "unit": base_unit,
                         "checked": False,
                     })
                 update_last_edited(selected_list_id)
                 st.experimental_rerun()
-
         # --- Display Items by Area ---
         items_by_area = defaultdict(list)
         for idx, item in enumerate(grocery_list["items"]):
             items_by_area[item["area"]].append((idx, item))
+        has_items = len(grocery_list["items"]) > 0
         for area in sorted(items_by_area.keys()):
             st.markdown(f"### {area}")
             # Unchecked first, then checked
@@ -176,4 +179,36 @@ else:
                         if st.button("🗑️", key=f"delete_item_{selected_list_id}_{idx}"):
                             grocery_list["items"].pop(idx)
                             update_last_edited(selected_list_id)
-                            st.experimental_rerun() 
+                            st.experimental_rerun()
+        # Only show separator if there are items
+        if has_items:
+            st.markdown("---")
+        # --- Area Overview Chart ---
+        import plotly.express as px
+        area_totals = {}
+        for item in grocery_list["items"]:
+            area = item["area"]
+            if not item["checked"]:
+                qty = item["quantity"]
+                unit = item["unit"]
+                # Convert to base units for chart
+                if unit == "ml":
+                    qty = (qty * ureg.milliliter).to("liter").magnitude
+                    unit = "l"
+                elif unit == "g":
+                    qty = (qty * ureg.gram).to("kilogram").magnitude
+                    unit = "kg"
+                # For pieces, kg, l, just use as is
+                area_totals.setdefault(area, 0)
+                area_totals[area] += qty
+        if area_totals:
+            import plotly.express as px
+            fig = px.bar(
+                x=list(area_totals.keys()),
+                y=list(area_totals.values()),
+                labels={'x': 'Area', 'y': 'Total Quantity (base units)'},
+                color=list(area_totals.keys()),
+            )
+            st.markdown("### Overview: Total Quantity per Area")
+            st.markdown("*Helps you plan your route through the store by showing where most of your shopping is concentrated.*")
+            st.plotly_chart(fig, use_container_width=True)
