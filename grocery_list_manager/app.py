@@ -6,15 +6,81 @@ ureg = UnitRegistry()
 import requests
 import random
 import pyttsx3
+import pandas as pd
+import os
+
+LISTS_CSV = os.path.join(os.path.dirname(__file__), 'grocery_lists.csv')
 
 st.set_page_config(page_title="Groli - Grocery List Manager", layout="wide")
 
-# --- Helper Functions ---
+# --- Persistence Functions ---
+def save_lists_to_csv(lists):
+    rows = []
+    for list_id, list_obj in lists.items():
+        for item in list_obj["items"]:
+            rows.append({
+                "list_id": list_id,
+                "list_name": list_obj["name"],
+                "last_edited": list_obj["last_edited"],
+                "item_name": item["name"],
+                "area": item["area"],
+                "quantity": item["quantity"],
+                "unit": item["unit"],
+                "checked": item["checked"],
+            })
+        if not list_obj["items"]:
+            # Save empty lists too
+            rows.append({
+                "list_id": list_id,
+                "list_name": list_obj["name"],
+                "last_edited": list_obj["last_edited"],
+                "item_name": "",
+                "area": "",
+                "quantity": "",
+                "unit": "",
+                "checked": "",
+            })
+    df = pd.DataFrame(rows)
+    df.to_csv(LISTS_CSV, index=False)
+
+def load_lists_from_csv():
+    if not os.path.exists(LISTS_CSV):
+        return {}
+    df = pd.read_csv(LISTS_CSV)
+    lists = {}
+    for _, row in df.iterrows():
+        list_id = str(row["list_id"])
+        if list_id not in lists:
+            lists[list_id] = {
+                "name": row["list_name"],
+                "items": [],
+                "last_edited": row["last_edited"] if not pd.isna(row["last_edited"]) else None,
+            }
+        if pd.notna(row["item_name"]) and row["item_name"]:
+            lists[list_id]["items"].append({
+                "name": row["item_name"],
+                "area": row["area"],
+                "quantity": float(row["quantity"]),
+                "unit": row["unit"],
+                "checked": bool(row["checked"]),
+            })
+    return lists
+
+# --- Load lists on app start ---
+if "grocery_lists" not in st.session_state:
+    st.session_state.grocery_lists = load_lists_from_csv()
+
+# --- Save lists on any change ---
 def get_lists():
     if "grocery_lists" not in st.session_state:
         st.session_state.grocery_lists = {}
     return st.session_state.grocery_lists
 
+def save_and_rerun():
+    save_lists_to_csv(st.session_state.grocery_lists)
+    st.rerun()
+
+# --- Helper Functions ---
 def get_last_edited(list_obj):
     return list_obj.get("last_edited", datetime.min)
 
@@ -39,6 +105,7 @@ with st.sidebar.form(key="create_list_sidebar_form", clear_on_submit=True):
             "last_edited": datetime.now(),
         }
         st.session_state.selected_list = list_id
+        save_and_rerun()
 
 # List selection
 lists = get_lists()
@@ -97,11 +164,11 @@ else:
                         grocery_list["name"] = new_name.strip() or grocery_list["name"]
                         update_last_edited(selected_list_id)
                         st.session_state[f"edit_name_{selected_list_id}"] = False
-                        st.experimental_rerun()
+                        save_and_rerun()
                 with cancel:
                     if st.button("❌ Cancel", key=f"cancel_name_{selected_list_id}"):
                         st.session_state[f"edit_name_{selected_list_id}"] = False
-                        st.experimental_rerun()
+                        save_and_rerun()
             else:
                 st.markdown(f"## {grocery_list['name']}")
                 st.markdown(f"**Estimated price: ${estimated_total:.2f}**")
@@ -126,12 +193,12 @@ else:
         with col2:
             if st.button("✏️", key=f"edit_btn_{selected_list_id}"):
                 st.session_state[f"edit_name_{selected_list_id}"] = True
-                st.experimental_rerun()
+                save_and_rerun()
         with col3:
             if st.button("🗑️ Delete List", key=f"delete_list_{selected_list_id}"):
                 del lists[selected_list_id]
                 st.session_state.pop("selected_list")
-                st.experimental_rerun()
+                save_and_rerun()
 
         st.markdown("---")
         # --- Add Item Form ---
@@ -195,7 +262,7 @@ else:
                         "checked": False,
                     })
                 update_last_edited(selected_list_id)
-                st.experimental_rerun()
+                save_and_rerun()
         # --- Display Items by Area ---
         items_by_area = defaultdict(list)
         for idx, item in enumerate(grocery_list["items"]):
@@ -215,7 +282,7 @@ else:
                         if checked != item["checked"]:
                             grocery_list["items"][idx]["checked"] = checked
                             update_last_edited(selected_list_id)
-                            st.experimental_rerun()
+                            save_and_rerun()
                     with namecol:
                         # Format quantity for display
                         qty_disp = item["quantity"]
@@ -226,7 +293,7 @@ else:
                         if st.button("🗑️", key=f"delete_item_{selected_list_id}_{idx}"):
                             grocery_list["items"].pop(idx)
                             update_last_edited(selected_list_id)
-                            st.experimental_rerun()
+                            save_and_rerun()
         # Only show separator if there are items
         if has_items:
             st.markdown("---")
