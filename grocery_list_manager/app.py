@@ -1,6 +1,8 @@
 import streamlit as st
 from datetime import datetime
 from collections import defaultdict
+from pint import UnitRegistry
+ureg = UnitRegistry()
 
 st.set_page_config(page_title="Groli - Grocery List Manager", layout="wide")
 
@@ -100,17 +102,40 @@ else:
                 st.write("")
                 add_item_btn = st.form_submit_button("Add Item")
             if add_item_btn and item_name.strip() and area.strip():
-                # Merge logic
+                # Merge logic with unit conversion
+                def get_pint_unit(unit):
+                    if unit == "kg": return ureg.kilogram
+                    if unit == "g": return ureg.gram
+                    if unit == "l": return ureg.liter
+                    if unit == "ml": return ureg.milliliter
+                    return None
+                base_unit = None
+                if unit in ["kg", "g"]:
+                    base_unit = "kg"
+                elif unit in ["l", "ml"]:
+                    base_unit = "l"
+                # Try to merge with compatible units
                 found = False
                 for item in grocery_list["items"]:
                     if (
                         item["name"].lower() == item_name.strip().lower()
                         and item["area"].lower() == area.strip().lower()
-                        and item["unit"] == unit
                     ):
-                        item["quantity"] += quantity
-                        found = True
-                        break
+                        # Check if units are compatible
+                        item_pint_unit = get_pint_unit(item["unit"])
+                        new_pint_unit = get_pint_unit(unit)
+                        if item_pint_unit and new_pint_unit and base_unit:
+                            # Convert both to base unit
+                            item_qty = (item["quantity"] * item_pint_unit).to(base_unit).magnitude
+                            new_qty = (quantity * new_pint_unit).to(base_unit).magnitude
+                            item["quantity"] = item_qty + new_qty
+                            item["unit"] = base_unit
+                            found = True
+                            break
+                        elif item["unit"] == unit:
+                            item["quantity"] += quantity
+                            found = True
+                            break
                 if not found:
                     grocery_list["items"].append({
                         "name": item_name.strip(),
@@ -142,7 +167,11 @@ else:
                             update_last_edited(selected_list_id)
                             st.experimental_rerun()
                     with namecol:
-                        st.write(f"{item['name']} ({item['quantity']} {item['unit']})")
+                        # Format quantity for display
+                        qty_disp = item["quantity"]
+                        if item["unit"] in ["kg", "l"]:
+                            qty_disp = round(qty_disp, 3)
+                        st.write(f"{item['name']} ({qty_disp} {item['unit']})")
                     with delcol:
                         if st.button("🗑️", key=f"delete_item_{selected_list_id}_{idx}"):
                             grocery_list["items"].pop(idx)
