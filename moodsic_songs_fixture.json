@@ -1,0 +1,3271 @@
+[
+  {
+    "model": "app.artist",
+    "pk": 1,
+    "fields": {
+      "name": "Don Toliver",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 2,
+    "fields": {
+      "name": "Travis Scott",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 3,
+    "fields": {
+      "name": "A$AP Rocky",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 4,
+    "fields": {
+      "name": "Jack Harlow",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 5,
+    "fields": {
+      "name": "Duki",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 6,
+    "fields": {
+      "name": "Bizarrap",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 7,
+    "fields": {
+      "name": "Cazzu",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 8,
+    "fields": {
+      "name": "Nicki Nicole",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 9,
+    "fields": {
+      "name": "Bad Bunny",
+      "country": "Puerto Rico",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 10,
+    "fields": {
+      "name": "Karol G",
+      "country": "Colombia",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 11,
+    "fields": {
+      "name": "De la Rose",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 12,
+    "fields": {
+      "name": "Siko",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 13,
+    "fields": {
+      "name": "Feid",
+      "country": "Colombia",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 14,
+    "fields": {
+      "name": "Omar Courtz",
+      "country": "Puerto Rico",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 15,
+    "fields": {
+      "name": "Trueno",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 16,
+    "fields": {
+      "name": "Wos",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 17,
+    "fields": {
+      "name": "RepliK",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 18,
+    "fields": {
+      "name": "Klan",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 19,
+    "fields": {
+      "name": "Zasko",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 20,
+    "fields": {
+      "name": "Blon",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 21,
+    "fields": {
+      "name": "Errec\u00c3\u00a9",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 22,
+    "fields": {
+      "name": "Chuty",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 23,
+    "fields": {
+      "name": "BTA",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 24,
+    "fields": {
+      "name": "Arkano",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 25,
+    "fields": {
+      "name": "Kidd Keo",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 26,
+    "fields": {
+      "name": "Ysy A",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 27,
+    "fields": {
+      "name": "Lit Killah",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 28,
+    "fields": {
+      "name": "Tiago PZK",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 29,
+    "fields": {
+      "name": "FMK",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 30,
+    "fields": {
+      "name": "Rusherking",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 31,
+    "fields": {
+      "name": "Drake",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 32,
+    "fields": {
+      "name": "Future",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 33,
+    "fields": {
+      "name": "Cardi B",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 34,
+    "fields": {
+      "name": "Post Malone",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 35,
+    "fields": {
+      "name": "Migos",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 36,
+    "fields": {
+      "name": "Lil Baby",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 37,
+    "fields": {
+      "name": "21 Savage",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 38,
+    "fields": {
+      "name": "Juice WRLD",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 39,
+    "fields": {
+      "name": "Megan Thee Stallion",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 40,
+    "fields": {
+      "name": "J Balvin",
+      "country": "Colombia",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 41,
+    "fields": {
+      "name": "Ozuna",
+      "country": "Puerto Rico",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 42,
+    "fields": {
+      "name": "Myke Towers",
+      "country": "Puerto Rico",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 43,
+    "fields": {
+      "name": "Sech",
+      "country": "Panama",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 44,
+    "fields": {
+      "name": "Rauw Alejandro",
+      "country": "Puerto Rico",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 45,
+    "fields": {
+      "name": "Nathy Peluso",
+      "country": "Argentina",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 1,
+    "fields": {
+      "name": "Trap"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 2,
+    "fields": {
+      "name": "Hip-Hop"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 3,
+    "fields": {
+      "name": "Rap"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 4,
+    "fields": {
+      "name": "R&B"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 5,
+    "fields": {
+      "name": "Reggaeton"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 6,
+    "fields": {
+      "name": "Pop"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 7,
+    "fields": {
+      "name": "Dance"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 8,
+    "fields": {
+      "name": "Latin"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 9,
+    "fields": {
+      "name": "Rock"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 10,
+    "fields": {
+      "name": "Emo Rap"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 11,
+    "fields": {
+      "name": "Flamenco"
+    }
+  },
+  {
+    "model": "app.genre",
+    "pk": 12,
+    "fields": {
+      "name": "Afrobeats"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 1,
+    "fields": {
+      "name": "fly"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 2,
+    "fields": {
+      "name": "flow"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 3,
+    "fields": {
+      "name": "vibing"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 4,
+    "fields": {
+      "name": "intense"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 5,
+    "fields": {
+      "name": "chill"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 6,
+    "fields": {
+      "name": "energetic"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 7,
+    "fields": {
+      "name": "dark"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 8,
+    "fields": {
+      "name": "happy"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 9,
+    "fields": {
+      "name": "sad"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 10,
+    "fields": {
+      "name": "romantic"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 11,
+    "fields": {
+      "name": "party"
+    }
+  },
+  {
+    "model": "app.mood",
+    "pk": 12,
+    "fields": {
+      "name": "melancholic"
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 1,
+    "fields": {
+      "title": "Goteo",
+      "artist": 5,
+      "genres": [
+        1
+      ],
+      "bpm": 145,
+      "moods": [
+        1,
+        2
+      ],
+      "language": "ES",
+      "year": 2019,
+      "tags": [
+        "artist:Duki",
+        "bpm:145",
+        "trap",
+        "fly",
+        "flow"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 2,
+    "fields": {
+      "title": "Praise The Lord",
+      "artist": 3,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 136,
+      "moods": [
+        1,
+        6,
+        5,
+        10
+      ],
+      "language": "EN",
+      "year": 2017,
+      "tags": [
+        "artist:A$AP Rocky",
+        "bpm:136",
+        "trap",
+        "hip-hop",
+        "fly",
+        "energetic",
+        "chill",
+        "romantic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 3,
+    "fields": {
+      "title": "No Idea",
+      "artist": 1,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 140,
+      "moods": [
+        3,
+        5,
+        12
+      ],
+      "language": "EN",
+      "year": 2020,
+      "tags": [
+        "artist:Don Toliver",
+        "bpm:140",
+        "trap",
+        "hip-hop",
+        "vibing",
+        "chill",
+        "melancholic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 4,
+    "fields": {
+      "title": "Cardigan",
+      "artist": 1,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 136,
+      "moods": [
+        3,
+        7,
+        6,
+        10
+      ],
+      "language": "EN",
+      "year": 2019,
+      "tags": [
+        "artist:Don Toliver",
+        "bpm:136",
+        "trap",
+        "hip-hop",
+        "vibing",
+        "dark",
+        "energetic",
+        "romantic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 6,
+    "fields": {
+      "title": "Stargazing",
+      "artist": 2,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 146,
+      "moods": [
+        2,
+        3,
+        5
+      ],
+      "language": "EN",
+      "year": 2017,
+      "tags": [
+        "artist:Travis Scott",
+        "bpm:146",
+        "trap",
+        "hip-hop",
+        "flow",
+        "vibing",
+        "chill"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 8,
+    "fields": {
+      "title": "BZRP Music Sessions #52",
+      "artist": 6,
+      "genres": [
+        1,
+        8
+      ],
+      "bpm": 90,
+      "moods": [
+        6,
+        11
+      ],
+      "language": "ES",
+      "year": 2022,
+      "tags": [
+        "artist:Bizarrap",
+        "bpm:90",
+        "trap",
+        "latin",
+        "energetic",
+        "party"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 10,
+    "fields": {
+      "title": "Sicko Mode",
+      "artist": 2,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 83,
+      "moods": [
+        4,
+        6
+      ],
+      "language": "EN",
+      "year": 2017,
+      "tags": [
+        "artist:Travis Scott",
+        "bpm:83",
+        "trap",
+        "hip-hop",
+        "intense",
+        "energetic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 11,
+    "fields": {
+      "title": "Yo Perreo Sola",
+      "artist": 9,
+      "genres": [
+        5,
+        8
+      ],
+      "bpm": 113,
+      "moods": [
+        11,
+        6,
+        3
+      ],
+      "language": "ES",
+      "year": 2021,
+      "tags": [
+        "artist:Bad Bunny",
+        "bpm:113",
+        "reggaeton",
+        "latin",
+        "party",
+        "energetic",
+        "vibing"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 12,
+    "fields": {
+      "title": "She Don't Give a Fo",
+      "artist": 5,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 136,
+      "moods": [
+        3,
+        6
+      ],
+      "language": "ES",
+      "year": 2020,
+      "tags": [
+        "artist:Duki",
+        "bpm:136",
+        "trap",
+        "hip-hop",
+        "vibing",
+        "energetic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 13,
+    "fields": {
+      "title": "After Party",
+      "artist": 1,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 162,
+      "moods": [
+        1,
+        2,
+        9,
+        11
+      ],
+      "language": "EN",
+      "year": 2020,
+      "tags": [
+        "artist:Don Toliver",
+        "bpm:162",
+        "trap",
+        "hip-hop",
+        "fly",
+        "flow",
+        "sad",
+        "party"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 13993,
+    "fields": {
+      "title": "Fantas\u00c3\u00ada",
+      "artist": 11,
+      "genres": [
+        1,
+        8
+      ],
+      "bpm": 120,
+      "moods": [
+        5,
+        7
+      ],
+      "language": "ES",
+      "year": 2022,
+      "tags": [
+        "artist:De la Rose",
+        "bpm:120",
+        "trap",
+        "latin",
+        "chill",
+        "dark"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 13994,
+    "fields": {
+      "title": "No Me Llames M\u00c3\u00a1s",
+      "artist": 12,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 128,
+      "moods": [
+        6,
+        8
+      ],
+      "language": "ES",
+      "year": 2023,
+      "tags": [
+        "artist:Siko",
+        "bpm:128",
+        "trap",
+        "hip-hop",
+        "energetic",
+        "happy"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 13995,
+    "fields": {
+      "title": "Porfa",
+      "artist": 13,
+      "genres": [
+        5,
+        8
+      ],
+      "bpm": 105,
+      "moods": [
+        5,
+        10
+      ],
+      "language": "ES",
+      "year": 2020,
+      "tags": [
+        "artist:Feid",
+        "bpm:105",
+        "reggaeton",
+        "latin",
+        "chill",
+        "romantic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 13996,
+    "fields": {
+      "title": "En Su Nota",
+      "artist": 14,
+      "genres": [
+        5,
+        8
+      ],
+      "bpm": 110,
+      "moods": [
+        6,
+        1
+      ],
+      "language": "ES",
+      "year": 2021,
+      "tags": [
+        "artist:Omar Courtz",
+        "bpm:110",
+        "reggaeton",
+        "latin",
+        "energetic",
+        "fly"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 13997,
+    "fields": {
+      "title": "Atrevido",
+      "artist": 15,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 132,
+      "moods": [
+        4,
+        6
+      ],
+      "language": "ES",
+      "year": 2021,
+      "tags": [
+        "artist:Trueno",
+        "bpm:132",
+        "trap",
+        "hip-hop",
+        "intense",
+        "energetic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 13998,
+    "fields": {
+      "title": "Canguro",
+      "artist": 16,
+      "genres": [
+        3,
+        2
+      ],
+      "bpm": 140,
+      "moods": [
+        3,
+        8
+      ],
+      "language": "ES",
+      "year": 2019,
+      "tags": [
+        "artist:Wos",
+        "bpm:140",
+        "rap",
+        "hip-hop",
+        "vibing",
+        "happy"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 13999,
+    "fields": {
+      "title": "5 Minutos M\u00c3\u00a1s",
+      "artist": 17,
+      "genres": [
+        3,
+        2
+      ],
+      "bpm": 138,
+      "moods": [
+        2,
+        7
+      ],
+      "language": "ES",
+      "year": 2022,
+      "tags": [
+        "artist:RepliK",
+        "bpm:138",
+        "rap",
+        "hip-hop",
+        "flow",
+        "dark"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 14000,
+    "fields": {
+      "title": "Freestyle Session",
+      "artist": 18,
+      "genres": [
+        3,
+        2
+      ],
+      "bpm": 142,
+      "moods": [
+        1,
+        3
+      ],
+      "language": "ES",
+      "year": 2023,
+      "tags": [
+        "artist:Klan",
+        "bpm:142",
+        "rap",
+        "hip-hop",
+        "fly",
+        "vibing"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 14001,
+    "fields": {
+      "title": "Mentalidad",
+      "artist": 19,
+      "genres": [
+        3,
+        2
+      ],
+      "bpm": 130,
+      "moods": [
+        4,
+        7
+      ],
+      "language": "ES",
+      "year": 2021,
+      "tags": [
+        "artist:Zasko",
+        "bpm:130",
+        "rap",
+        "hip-hop",
+        "intense",
+        "dark"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 14002,
+    "fields": {
+      "title": "Barcelona Nights",
+      "artist": 20,
+      "genres": [
+        3,
+        2
+      ],
+      "bpm": 125,
+      "moods": [
+        5,
+        8
+      ],
+      "language": "ES",
+      "year": 2022,
+      "tags": [
+        "artist:Blon",
+        "bpm:125",
+        "rap",
+        "hip-hop",
+        "chill",
+        "happy"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 64,
+    "fields": {
+      "title": "Tyler Herro",
+      "artist": 4,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 148,
+      "moods": [
+        1,
+        6,
+        7,
+        11
+      ],
+      "language": "EN",
+      "year": 2021,
+      "tags": [
+        "artist:Jack Harlow",
+        "bpm:148",
+        "trap",
+        "hip-hop",
+        "fly",
+        "energetic",
+        "dark",
+        "party"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 68,
+    "fields": {
+      "title": "F**kin' Problems",
+      "artist": 3,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 100,
+      "moods": [
+        4,
+        6
+      ],
+      "language": "EN",
+      "year": 2012,
+      "tags": [
+        "artist:A$AP Rocky",
+        "bpm:100",
+        "trap",
+        "hip-hop",
+        "intense",
+        "energetic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 73,
+    "fields": {
+      "title": "Whats Poppin",
+      "artist": 4,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 148,
+      "moods": [
+        6,
+        11,
+        10,
+        12
+      ],
+      "language": "EN",
+      "year": 2021,
+      "tags": [
+        "artist:Jack Harlow",
+        "bpm:148",
+        "trap",
+        "hip-hop",
+        "energetic",
+        "party",
+        "romantic",
+        "melancholic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 76,
+    "fields": {
+      "title": "Colocao",
+      "artist": 8,
+      "genres": [
+        1,
+        8
+      ],
+      "bpm": 102,
+      "moods": [
+        4,
+        7
+      ],
+      "language": "ES",
+      "year": 2021,
+      "tags": [
+        "artist:Nicki Nicole",
+        "bpm:102",
+        "trap",
+        "latin",
+        "intense",
+        "dark"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 79,
+    "fields": {
+      "title": "Safaera",
+      "artist": 9,
+      "genres": [
+        5,
+        8
+      ],
+      "bpm": 160,
+      "moods": [
+        6,
+        11,
+        1,
+        5
+      ],
+      "language": "ES",
+      "year": 2021,
+      "tags": [
+        "artist:Bad Bunny",
+        "bpm:160",
+        "reggaeton",
+        "latin",
+        "energetic",
+        "party",
+        "fly",
+        "chill"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 80,
+    "fields": {
+      "title": "BZRP Music Sessions #36",
+      "artist": 6,
+      "genres": [
+        1,
+        8
+      ],
+      "bpm": 82,
+      "moods": [
+        5,
+        7,
+        1
+      ],
+      "language": "ES",
+      "year": 2022,
+      "tags": [
+        "artist:Bizarrap",
+        "bpm:82",
+        "trap",
+        "latin",
+        "chill",
+        "dark",
+        "fly"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 82,
+    "fields": {
+      "title": "L$D",
+      "artist": 3,
+      "genres": [
+        4,
+        2
+      ],
+      "bpm": 130,
+      "moods": [
+        5,
+        10,
+        2
+      ],
+      "language": "EN",
+      "year": 2014,
+      "tags": [
+        "artist:A$AP Rocky",
+        "bpm:130",
+        "r&b",
+        "hip-hop",
+        "chill",
+        "romantic",
+        "flow"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 84,
+    "fields": {
+      "title": "Goosebumps",
+      "artist": 2,
+      "genres": [
+        1,
+        2
+      ],
+      "bpm": 117,
+      "moods": [
+        5,
+        9
+      ],
+      "language": "EN",
+      "year": 2016,
+      "tags": [
+        "artist:Travis Scott",
+        "bpm:117",
+        "trap",
+        "hip-hop",
+        "chill",
+        "sad"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 88,
+    "fields": {
+      "title": "Nada",
+      "artist": 7,
+      "genres": [
+        1,
+        8
+      ],
+      "bpm": 125,
+      "moods": [
+        7,
+        12
+      ],
+      "language": "ES",
+      "year": 2020,
+      "tags": [
+        "artist:Cazzu",
+        "bpm:125",
+        "trap",
+        "latin",
+        "dark",
+        "melancholic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 93,
+    "fields": {
+      "title": "Mucha Data",
+      "artist": 7,
+      "genres": [
+        1,
+        8
+      ],
+      "bpm": 129,
+      "moods": [
+        1,
+        5,
+        6
+      ],
+      "language": "ES",
+      "year": 2020,
+      "tags": [
+        "artist:Cazzu",
+        "bpm:129",
+        "trap",
+        "latin",
+        "fly",
+        "chill",
+        "energetic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 105,
+    "fields": {
+      "title": "Tusa",
+      "artist": 10,
+      "genres": [
+        5,
+        8
+      ],
+      "bpm": 132,
+      "moods": [
+        7,
+        9,
+        3,
+        12
+      ],
+      "language": "ES",
+      "year": 2018,
+      "tags": [
+        "artist:Karol G",
+        "bpm:132",
+        "reggaeton",
+        "latin",
+        "dark",
+        "sad",
+        "vibing",
+        "melancholic"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 111,
+    "fields": {
+      "title": "Wapo Traketero",
+      "artist": 8,
+      "genres": [
+        1,
+        8
+      ],
+      "bpm": 115,
+      "moods": [
+        3,
+        5,
+        7
+      ],
+      "language": "ES",
+      "year": 2018,
+      "tags": [
+        "artist:Nicki Nicole",
+        "bpm:115",
+        "trap",
+        "latin",
+        "vibing",
+        "chill",
+        "dark"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 120,
+    "fields": {
+      "title": "Bichota",
+      "artist": 10,
+      "genres": [
+        5,
+        8
+      ],
+      "bpm": 125,
+      "moods": [
+        6,
+        11,
+        7,
+        9
+      ],
+      "language": "ES",
+      "year": 2021,
+      "tags": [
+        "artist:Karol G",
+        "bpm:125",
+        "reggaeton",
+        "latin",
+        "energetic",
+        "party",
+        "dark",
+        "sad"
+      ]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 100,
+    "fields": {
+      "title": "God's Plan",
+      "artist": 31,
+      "genres": [1, 2, 3],
+      "bpm": 77,
+      "moods": [8, 2],
+      "language": "EN",
+      "year": 2018,
+      "tags": ["artist:Drake", "bpm:77", "trap", "hip-hop", "rap", "happy", "flow"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 101,
+    "fields": {
+      "title": "Mask Off",
+      "artist": 32,
+      "genres": [1, 2],
+      "bpm": 150,
+      "moods": [5, 7],
+      "language": "EN",
+      "year": 2017,
+      "tags": ["artist:Future", "bpm:150", "trap", "hip-hop", "chill", "dark"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 102,
+    "fields": {
+      "title": "Bodak Yellow",
+      "artist": 33,
+      "genres": [1, 2],
+      "bpm": 125,
+      "moods": [6, 1],
+      "language": "EN",
+      "year": 2017,
+      "tags": ["artist:Cardi B", "bpm:125", "trap", "hip-hop", "energetic", "fly"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 103,
+    "fields": {
+      "title": "Rockstar",
+      "artist": 34,
+      "genres": [1, 2, 3],
+      "bpm": 160,
+      "moods": [7, 4],
+      "language": "EN",
+      "year": 2017,
+      "tags": ["artist:Post Malone", "bpm:160", "trap", "hip-hop", "rap", "dark", "intense"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 104,
+    "fields": {
+      "title": "Bad and Boujee",
+      "artist": 35,
+      "genres": [1, 2, 3],
+      "bpm": 127,
+      "moods": [11, 1],
+      "language": "EN",
+      "year": 2016,
+      "tags": ["artist:Migos", "bpm:127", "trap", "hip-hop", "rap", "party", "fly"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 105,
+    "fields": {
+      "title": "Drip Too Hard",
+      "artist": 36,
+      "genres": [1, 2, 3],
+      "bpm": 142,
+      "moods": [2, 6],
+      "language": "EN",
+      "year": 2018,
+      "tags": ["artist:Lil Baby", "bpm:142", "trap", "hip-hop", "rap", "flow", "energetic"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 106,
+    "fields": {
+      "title": "Bank Account",
+      "artist": 37,
+      "genres": [1, 2, 3],
+      "bpm": 85,
+      "moods": [7, 5],
+      "language": "EN",
+      "year": 2017,
+      "tags": ["artist:21 Savage", "bpm:85", "trap", "hip-hop", "rap", "dark", "chill"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 107,
+    "fields": {
+      "title": "Lucid Dreams",
+      "artist": 38,
+      "genres": [10, 1, 2, 3],
+      "bpm": 84,
+      "moods": [12, 9],
+      "language": "EN",
+      "year": 2018,
+      "tags": ["artist:Juice WRLD", "bpm:84", "emo rap", "trap", "hip-hop", "rap", "melancholic", "sad"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 108,
+    "fields": {
+      "title": "Savage",
+      "artist": 39,
+      "genres": [1, 2, 3],
+      "bpm": 84,
+      "moods": [6, 1],
+      "language": "EN",
+      "year": 2020,
+      "tags": ["artist:Megan Thee Stallion", "bpm:84", "trap", "hip-hop", "rap", "energetic", "fly"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 109,
+    "fields": {
+      "title": "Mi Gente",
+      "artist": 40,
+      "genres": [5, 8],
+      "bpm": 105,
+      "moods": [11, 8],
+      "language": "ES",
+      "year": 2017,
+      "tags": ["artist:J Balvin", "bpm:105", "reggaeton", "Latin", "party", "happy"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 110,
+    "fields": {
+      "title": "Caramelo",
+      "artist": 41,
+      "genres": [5, 1, 8],
+      "bpm": 92,
+      "moods": [8, 3],
+      "language": "ES",
+      "year": 2020,
+      "tags": ["artist:Ozuna", "bpm:92", "reggaeton", "trap", "Latin", "happy", "vibing"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 111,
+    "fields": {
+      "title": "La Playa",
+      "artist": 42,
+      "genres": [1, 5, 8],
+      "bpm": 90,
+      "moods": [5, 10],
+      "language": "ES",
+      "year": 2020,
+      "tags": ["artist:Myke Towers", "bpm:90", "trap", "reggaeton", "Latin", "chill", "romantic"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 112,
+    "fields": {
+      "title": "Otro Trago",
+      "artist": 43,
+      "genres": [5, 1, 8],
+      "bpm": 90,
+      "moods": [10, 3],
+      "language": "ES",
+      "year": 2019,
+      "tags": ["artist:Sech", "bpm:90", "reggaeton", "trap", "Latin", "romantic", "vibing"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 113,
+    "fields": {
+      "title": "Todo de Ti",
+      "artist": 44,
+      "genres": [5, 8, 6],
+      "bpm": 128,
+      "moods": [6, 8],
+      "language": "ES",
+      "year": 2021,
+      "tags": ["artist:Rauw Alejandro", "bpm:128", "reggaeton", "Latin", "pop", "energetic", "happy"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 114,
+    "fields": {
+      "title": "Delito",
+      "artist": 45,
+      "genres": [1, 2, 3, 8],
+      "bpm": 80,
+      "moods": [4, 7],
+      "language": "ES",
+      "year": 2020,
+      "tags": ["artist:Nathy Peluso", "bpm:80", "trap", "hip-hop", "rap", "Latin", "intense", "dark"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 115,
+    "fields": {
+      "title": "Robbery",
+      "artist": 38,
+      "genres": [10, 1, 2],
+      "bpm": 130,
+      "moods": [9, 12],
+      "language": "EN",
+      "year": 2019,
+      "tags": ["artist:Juice WRLD", "bpm:130", "emo rap", "trap", "hip-hop", "sad", "melancholic"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 116,
+    "fields": {
+      "title": "Tunnel Vision",
+      "artist": 37,
+      "genres": [1, 2, 3],
+      "bpm": 150,
+      "moods": [4, 7],
+      "language": "EN",
+      "year": 2017,
+      "tags": ["artist:21 Savage", "bpm:150", "trap", "hip-hop", "rap", "intense", "dark"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 117,
+    "fields": {
+      "title": "Best Friend",
+      "artist": 35,
+      "genres": [1, 2, 3],
+      "bpm": 80,
+      "moods": [1, 6],
+      "language": "EN",
+      "year": 2017,
+      "tags": ["artist:Migos", "bpm:80", "trap", "hip-hop", "rap", "fly", "energetic"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 118,
+    "fields": {
+      "title": "Laugh Now Cry Later",
+      "artist": 31,
+      "genres": [1, 2, 3],
+      "bpm": 85,
+      "moods": [2, 8],
+      "language": "EN",
+      "year": 2020,
+      "tags": ["artist:Drake", "bpm:85", "trap", "hip-hop", "rap", "flow", "happy"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 119,
+    "fields": {
+      "title": "Hot Girl Summer",
+      "artist": 39,
+      "genres": [1, 2, 3],
+      "bpm": 110,
+      "moods": [11, 1],
+      "language": "EN",
+      "year": 2019,
+      "tags": ["artist:Megan Thee Stallion", "bpm:110", "trap", "hip-hop", "rap", "party", "fly"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 120,
+    "fields": {
+      "title": "Goosebumps",
+      "artist": 2,
+      "genres": [1, 2, 3],
+      "bpm": 130,
+      "moods": [7, 5],
+      "language": "EN",
+      "year": 2016,
+      "tags": ["artist:Travis Scott", "bpm:130", "trap", "hip-hop", "rap", "dark", "chill"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 121,
+    "fields": {
+      "title": "The Box",
+      "artist": 37,
+      "genres": [1, 2, 3],
+      "bpm": 117,
+      "moods": [2, 6],
+      "language": "EN",
+      "year": 2019,
+      "tags": ["artist:21 Savage", "bpm:117", "trap", "hip-hop", "rap", "flow", "energetic"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 122,
+    "fields": {
+      "title": "Te Boté (Remix)",
+      "artist": 9,
+      "genres": [5, 1, 8],
+      "bpm": 97,
+      "moods": [11, 6],
+      "language": "ES",
+      "year": 2018,
+      "tags": ["artist:Bad Bunny", "bpm:97", "reggaeton", "trap", "Latin", "party", "energetic"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 123,
+    "fields": {
+      "title": "Solo de Mí",
+      "artist": 9,
+      "genres": [5, 1, 8],
+      "bpm": 180,
+      "moods": [10, 12],
+      "language": "ES",
+      "year": 2018,
+      "tags": ["artist:Bad Bunny", "bpm:180", "reggaeton", "trap", "Latin", "romantic", "melancholic"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 124,
+    "fields": {
+      "title": "Provenza",
+      "artist": 10,
+      "genres": [5, 6, 12],
+      "bpm": 111,
+      "moods": [5, 8],
+      "language": "ES",
+      "year": 2022,
+      "tags": ["artist:Karol G", "bpm:111", "reggaeton", "pop", "afrobeats", "chill", "happy"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 125,
+    "fields": {
+      "title": "Canguro",
+      "artist": 16,
+      "genres": [3, 1, 2, 8],
+      "bpm": 95,
+      "moods": [6, 2],
+      "language": "ES",
+      "year": 2019,
+      "tags": ["artist:Wos", "bpm:95", "rap", "trap", "hip-hop", "Latin", "energetic", "flow"]
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 46,
+    "fields": {
+      "name": "Lali",
+      "country": "Argentina",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 47,
+    "fields": {
+      "name": "Babasónicos",
+      "country": "Argentina",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 48,
+    "fields": {
+      "name": "Soda Stereo",
+      "country": "Argentina",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 49,
+    "fields": {
+      "name": "Paulo Londra",
+      "country": "Argentina",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 50,
+    "fields": {
+      "name": "Bandalos Chinos",
+      "country": "Argentina",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 126,
+    "fields": {
+      "title": "Ladrón",
+      "artist": 46,
+      "genres": [6, 1, 8],
+      "bpm": 98,
+      "moods": [11, 1],
+      "language": "ES",
+      "year": 2020,
+      "tags": ["artist:Lali", "bpm:98", "pop", "trap", "Latin", "party", "fly"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 127,
+    "fields": {
+      "title": "Atrevido",
+      "artist": 15,
+      "genres": [3, 1, 2, 8],
+      "bpm": 100,
+      "moods": [4, 6],
+      "language": "ES",
+      "year": 2020,
+      "tags": ["artist:Trueno", "bpm:100", "rap", "trap", "hip-hop", "Latin", "intense", "energetic"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 128,
+    "fields": {
+      "title": "Putita",
+      "artist": 47,
+      "genres": [9, 6, 8],
+      "bpm": 120,
+      "moods": [6, 1],
+      "language": "ES",
+      "year": 2003,
+      "tags": ["artist:Babasónicos", "bpm:120", "rock", "pop", "Latin", "energetic", "fly"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 129,
+    "fields": {
+      "title": "De Música Ligera",
+      "artist": 48,
+      "genres": [9, 6, 8],
+      "bpm": 140,
+      "moods": [11, 8],
+      "language": "ES",
+      "year": 1990,
+      "tags": ["artist:Soda Stereo", "bpm:140", "rock", "pop", "Latin", "party", "happy"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 130,
+    "fields": {
+      "title": "Adán y Eva",
+      "artist": 49,
+      "genres": [1, 3, 2, 8],
+      "bpm": 85,
+      "moods": [10, 5],
+      "language": "ES",
+      "year": 2018,
+      "tags": ["artist:Paulo Londra", "bpm:85", "trap", "rap", "hip-hop", "Latin", "romantic", "chill"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 131,
+    "fields": {
+      "title": "El Show",
+      "artist": 50,
+      "genres": [6, 8],
+      "bpm": 100,
+      "moods": [3, 8],
+      "language": "ES",
+      "year": 2018,
+      "tags": ["artist:Bandalos Chinos", "bpm:100", "indie pop", "Latin", "vibing", "happy"]
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 51,
+    "fields": {
+      "name": "Kase.O",
+      "country": "Spain",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 52,
+    "fields": {
+      "name": "Natos y Waor",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 53,
+    "fields": {
+      "name": "Rels B",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 54,
+    "fields": {
+      "name": "C. Tangana",
+      "country": "Spain",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 55,
+    "fields": {
+      "name": "Ayax",
+      "country": "Spain",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 132,
+    "fields": {
+      "title": "Mitad y Mitad",
+      "artist": 51,
+      "genres": [3, 2],
+      "bpm": 92,
+      "moods": [4, 2],
+      "language": "ES",
+      "year": 2016,
+      "tags": ["artist:Kase.O", "bpm:92", "rap", "hip-hop", "intense", "flow"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 133,
+    "fields": {
+      "title": "Cicatrices",
+      "artist": 52,
+      "genres": [3, 1, 2],
+      "bpm": 90,
+      "moods": [7, 12],
+      "language": "ES",
+      "year": 2018,
+      "tags": ["artist:Natos y Waor", "bpm:90", "rap", "trap", "hip-hop", "dark", "melancholic"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 134,
+    "fields": {
+      "title": "Lejos de Ti",
+      "artist": 53,
+      "genres": [3, 1, 4, 2],
+      "bpm": 80,
+      "moods": [5, 10],
+      "language": "ES",
+      "year": 2019,
+      "tags": ["artist:Rels B", "bpm:80", "rap", "trap", "R&B", "hip-hop", "chill", "romantic"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 135,
+    "fields": {
+      "title": "Tú Me Dejaste De Querer",
+      "artist": 54,
+      "genres": [3, 1, 11, 8],
+      "bpm": 70,
+      "moods": [12, 9],
+      "language": "ES",
+      "year": 2020,
+      "tags": ["artist:C. Tangana", "bpm:70", "rap", "trap", "flamenco", "Latin", "melancholic", "sad"]
+    }
+  },
+  {
+    "model": "app.song",
+    "pk": 136,
+    "fields": {
+      "title": "Matar al Mensajero",
+      "artist": 55,
+      "genres": [3, 2],
+      "bpm": 95,
+      "moods": [4, 7],
+      "language": "ES",
+      "year": 2018,
+      "tags": ["artist:Ayax", "bpm:95", "rap", "hip-hop", "intense", "dark"]
+    }
+  },
+
+  {
+    "model": "app.artist",
+    "pk": 11,
+    "fields": {
+      "name": "Drake",
+      "country": "Canada",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 12,
+    "fields": {
+      "name": "Post Malone",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 13,
+    "fields": {
+      "name": "The Weeknd",
+      "country": "Canada",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 14,
+    "fields": {
+      "name": "Kendrick Lamar",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 15,
+    "fields": {
+      "name": "J. Cole",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 16,
+    "fields": {
+      "name": "Eminem",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 17,
+    "fields": {
+      "name": "Kanye West",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 18,
+    "fields": {
+      "name": "Lil Baby",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 19,
+    "fields": {
+      "name": "DaBaby",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 20,
+    "fields": {
+      "name": "Megan Thee Stallion",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 21,
+    "fields": {
+      "name": "Cardi B",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 22,
+    "fields": {
+      "name": "Doja Cat",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+     {
+     "model": "app.artist",
+     "pk": 23,
+     "fields": {
+       "name": "Dua Lipa",
+       "country": "UK",
+       "is_trap": false
+     }
+   },
+   {
+     "model": "app.artist",
+     "pk": 25,
+     "fields": {
+       "name": "Ariana Grande",
+       "country": "USA",
+       "is_trap": false
+     }
+   },
+  {
+    "model": "app.artist",
+    "pk": 26,
+    "fields": {
+      "name": "Billie Eilish",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 27,
+    "fields": {
+      "name": "Olivia Rodrigo",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 28,
+    "fields": {
+      "name": "Lil Nas X",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 29,
+    "fields": {
+      "name": "Roddy Ricch",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 30,
+    "fields": {
+      "name": "Pop Smoke",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 31,
+    "fields": {
+      "name": "Juice WRLD",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 32,
+    "fields": {
+      "name": "XXXTentacion",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 33,
+    "fields": {
+      "name": "Lil Uzi Vert",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 34,
+    "fields": {
+      "name": "Playboi Carti",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 35,
+    "fields": {
+      "name": "YoungBoy Never Broke Again",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 36,
+    "fields": {
+      "name": "Lil Tjay",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 37,
+    "fields": {
+      "name": "Polo G",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 38,
+    "fields": {
+      "name": "NLE Choppa",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 39,
+    "fields": {
+      "name": "King Von",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 40,
+    "fields": {
+      "name": "Lil Durk",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 41,
+    "fields": {
+      "name": "Gunna",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 42,
+    "fields": {
+      "name": "Lil Baby",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 43,
+    "fields": {
+      "name": "Future",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 44,
+    "fields": {
+      "name": "Lil Wayne",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 45,
+    "fields": {
+      "name": "Nicki Minaj",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 46,
+    "fields": {
+      "name": "Rihanna",
+      "country": "Barbados",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 47,
+    "fields": {
+      "name": "Beyoncé",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 48,
+    "fields": {
+      "name": "Bruno Mars",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 49,
+    "fields": {
+      "name": "Ed Sheeran",
+      "country": "UK",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 50,
+    "fields": {
+      "name": "Taylor Swift",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 51,
+    "fields": {
+      "name": "Justin Bieber",
+      "country": "Canada",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 52,
+    "fields": {
+      "name": "Shawn Mendes",
+      "country": "Canada",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 53,
+    "fields": {
+      "name": "Camila Cabello",
+      "country": "Cuba",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 54,
+    "fields": {
+      "name": "Selena Gomez",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 55,
+    "fields": {
+      "name": "Demi Lovato",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 56,
+    "fields": {
+      "name": "Miley Cyrus",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 57,
+    "fields": {
+      "name": "Katy Perry",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 58,
+    "fields": {
+      "name": "Lady Gaga",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 59,
+    "fields": {
+      "name": "Adele",
+      "country": "UK",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 60,
+    "fields": {
+      "name": "Sam Smith",
+      "country": "UK",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 61,
+    "fields": {
+      "name": "Lewis Capaldi",
+      "country": "UK",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 62,
+    "fields": {
+      "name": "Harry Styles",
+      "country": "UK",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 63,
+    "fields": {
+      "name": "Lizzo",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 64,
+    "fields": {
+      "name": "Halsey",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 65,
+    "fields": {
+      "name": "Lana Del Rey",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 66,
+    "fields": {
+      "name": "SZA",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 67,
+    "fields": {
+      "name": "Summer Walker",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 68,
+    "fields": {
+      "name": "Jhené Aiko",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 69,
+    "fields": {
+      "name": "Kehlani",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 70,
+    "fields": {
+      "name": "Ella Mai",
+      "country": "UK",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 71,
+    "fields": {
+      "name": "Daniel Caesar",
+      "country": "Canada",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 72,
+    "fields": {
+      "name": "Giveon",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 73,
+    "fields": {
+      "name": "Lucky Daye",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 74,
+    "fields": {
+      "name": "Brent Faiyaz",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 75,
+    "fields": {
+      "name": "Frank Ocean",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+     {
+     "model": "app.artist",
+     "pk": 76,
+     "fields": {
+       "name": "Miguel",
+       "country": "USA",
+       "is_trap": false
+     }
+   },
+   {
+     "model": "app.artist",
+     "pk": 78,
+     "fields": {
+       "name": "Usher",
+       "country": "USA",
+       "is_trap": false
+     }
+   },
+  {
+    "model": "app.artist",
+    "pk": 79,
+    "fields": {
+      "name": "Chris Brown",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 80,
+    "fields": {
+      "name": "Trey Songz",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 81,
+    "fields": {
+      "name": "Ty Dolla $ign",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 82,
+    "fields": {
+      "name": "Jeremih",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 83,
+    "fields": {
+      "name": "Jacquees",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 84,
+    "fields": {
+      "name": "Tory Lanez",
+      "country": "Canada",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 85,
+    "fields": {
+      "name": "6LACK",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 86,
+    "fields": {
+      "name": "PARTYNEXTDOOR",
+      "country": "Canada",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 87,
+    "fields": {
+      "name": "Bryson Tiller",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 88,
+    "fields": {
+      "name": "Khalid",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 89,
+    "fields": {
+      "name": "Post Malone",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 90,
+    "fields": {
+      "name": "21 Savage",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 91,
+    "fields": {
+      "name": "Offset",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 92,
+    "fields": {
+      "name": "Quavo",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 93,
+    "fields": {
+      "name": "Takeoff",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 94,
+    "fields": {
+      "name": "Lil Yachty",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 95,
+    "fields": {
+      "name": "Ski Mask The Slump God",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 96,
+    "fields": {
+      "name": "Smokepurpp",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 97,
+    "fields": {
+      "name": "Trippie Redd",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 98,
+    "fields": {
+      "name": "Lil Peep",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 99,
+    "fields": {
+      "name": "Lil Skies",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 100,
+    "fields": {
+      "name": "YBN Cordae",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 101,
+    "fields": {
+      "name": "JID",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 102,
+    "fields": {
+      "name": "EarthGang",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 103,
+    "fields": {
+      "name": "Denzel Curry",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 104,
+    "fields": {
+      "name": "Joey Bada$$",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 105,
+    "fields": {
+      "name": "Logic",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 106,
+    "fields": {
+      "name": "NF",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 107,
+    "fields": {
+      "name": "Machine Gun Kelly",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 108,
+    "fields": {
+      "name": "G-Eazy",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 109,
+    "fields": {
+      "name": "Macklemore",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 110,
+    "fields": {
+      "name": "Wiz Khalifa",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 111,
+    "fields": {
+      "name": "Mac Miller",
+      "country": "USA",
+      "is_trap": false
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 112,
+    "fields": {
+      "name": "A$AP Ferg",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 113,
+    "fields": {
+      "name": "A$AP Twelvyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 114,
+    "fields": {
+      "name": "A$AP Ant",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 115,
+    "fields": {
+      "name": "A$AP Nast",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 116,
+    "fields": {
+      "name": "A$AP Yams",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 117,
+    "fields": {
+      "name": "A$AP Bari",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 118,
+    "fields": {
+      "name": "A$AP Illz",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 119,
+    "fields": {
+      "name": "A$AP Lotto",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 120,
+    "fields": {
+      "name": "A$AP P on the Boards",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 121,
+    "fields": {
+      "name": "A$AP TyY",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 122,
+    "fields": {
+      "name": "A$AP Ty Beats",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 123,
+    "fields": {
+      "name": "A$AP Ty Dolla $ign",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 124,
+    "fields": {
+      "name": "A$AP Tyga",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 125,
+    "fields": {
+      "name": "A$AP Tyree",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 126,
+    "fields": {
+      "name": "A$AP Tyrell",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 127,
+    "fields": {
+      "name": "A$AP Tyron",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 128,
+    "fields": {
+      "name": "A$AP Tyrone",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 129,
+    "fields": {
+      "name": "A$AP Tyronne",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 130,
+    "fields": {
+      "name": "A$AP Tyronny",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 131,
+    "fields": {
+      "name": "A$AP Tyronnyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 132,
+    "fields": {
+      "name": "A$AP Tyronnyyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 133,
+    "fields": {
+      "name": "A$AP Tyronnyyyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 134,
+    "fields": {
+      "name": "A$AP Tyronnyyyyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 135,
+    "fields": {
+      "name": "A$AP Tyronnyyyyyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 136,
+    "fields": {
+      "name": "A$AP Tyronnyyyyyyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 137,
+    "fields": {
+      "name": "A$AP Tyronnyyyyyyyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 138,
+    "fields": {
+      "name": "A$AP Tyronnyyyyyyyyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 139,
+    "fields": {
+      "name": "A$AP Tyronnyyyyyyyyyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  },
+  {
+    "model": "app.artist",
+    "pk": 140,
+    "fields": {
+      "name": "A$AP Tyronnyyyyyyyyyyy",
+      "country": "USA",
+      "is_trap": true
+    }
+  }
+]
