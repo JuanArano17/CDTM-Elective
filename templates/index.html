@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="mb-3">Meal Ideas</h2>
+<form method="get" class="mb-3">
+  <label for="sugar" class="form-label">Filter by sugar level:</label>
+  <select name="sugar" id="sugar" class="form-select w-auto d-inline-block">
+    <option value="">All</option>
+    <option value="Low" {% if sugar_filter=='Low' %}selected{% endif %}>Low</option>
+    <option value="Medium" {% if sugar_filter=='Medium' %}selected{% endif %}>Medium</option>
+    <option value="High" {% if sugar_filter=='High' %}selected{% endif %}>High</option>
+  </select>
+  <button type="submit" class="btn btn-primary ms-2">Filter</button>
+</form>
+<table class="table table-hover align-middle">
+  <thead>
+    <tr>
+      <th>Meal</th>
+      <th>Sugar</th>
+      <th>Gluten-Free</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for meal in meals %}
+    <tr>
+      <td>{{ meal.name }}</td>
+      <td>
+        <span class="badge sugar-{{ meal.sugar|lower }}">{{ meal.sugar }}</span>
+      </td>
+      <td>
+        {% if meal.gluten_free %}
+          <span class="badge bg-success">Gluten-Free</span>
+        {% else %}
+          <span class="badge bg-danger">Contains Gluten</span>
+        {% endif %}
+      </td>
+      <td>
+        <form method="post" action="/delete/{{ loop.index0 }}" style="display:inline;">
+          <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Remove this meal?');">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a href="/add" class="btn btn-success">Add New Meal</a>
+{% endblock %} 

@@ -1,0 +1,5 @@
+body { background: #f8fafc; }
+.sugar-low { background: #b6e2b6 !important; color: #155724 !important; }
+.sugar-medium { background: #ffe9a7 !important; color: #856404 !important; }
+.sugar-high { background: #f8b6b6 !important; color: #721c24 !important; }
+.table th, .table td { vertical-align: middle; } 
