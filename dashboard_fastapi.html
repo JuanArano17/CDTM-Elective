@@ -1,0 +1,48 @@
+{% extends 'base_fastapi.html' %}
+{% block content %}
+<h2>{{ t('dashboard') }}</h2>
+<div class="row mb-4">
+  <div class="col-md-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">{{ t('gym_routine') }}</h5>
+        <p class="card-text">{{ t('add_workout') }}: {{ workouts|length }}</p>
+        <p class="card-text">{% if workouts %}{{ t('workout_date') }}: {{ workouts[0].date }}{% endif %}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ t('gym_routine') }} {{ t('progress_chart') }}</h5>
+        <canvas id="workoutChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const ctx = document.getElementById('workoutChart').getContext('2d');
+const workoutData = {
+  labels: [{% for w in workouts|reverse %}'{{ w.date }}',{% endfor %}],
+  datasets: [{
+    label: '{{ t('add_workout') }}',
+    data: [{% for w in workouts|reverse %}1,{% endfor %}],
+    borderColor: 'blue',
+    backgroundColor: 'rgba(0,123,255,0.2)',
+    fill: true,
+    tension: 0.1
+  }]
+};
+new Chart(ctx, {
+  type: 'line',
+  data: workoutData,
+  options: {
+    scales: {
+      y: { beginAtZero: true, stepSize: 1 }
+    }
+  }
+});
+</script>
+{% endblock %} 

@@ -1,0 +1,64 @@
+{% extends 'base_fastapi.html' %}
+{% block content %}
+<h2>{{ t('gym_routine') }}</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <form method="post" action="/gym/add">
+          <input type="hidden" name="lang" value="{{ lang }}">
+          <input type="hidden" name="theme" value="{{ theme }}">
+          <div class="mb-2">
+            <label class="form-label">{{ t('workout_date') }}</label>
+            <input type="date" name="date" class="form-control" required>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">{{ t('duration') }}</label>
+            <input type="number" name="duration" class="form-control" min="1" required>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">{{ t('notes') }}</label>
+            <input type="text" name="notes" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">{{ t('add_workout') }}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ t('gym_routine') }}</h5>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>{{ t('workout_date') }}</th>
+              <th>{{ t('duration') }}</th>
+              <th>{{ t('notes') }}</th>
+              <th>{{ t('actions') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for w in workouts %}
+            <tr>
+              <td>{{ w.date }}</td>
+              <td>{{ w.duration }}</td>
+              <td>{{ w.notes }}</td>
+              <td>
+                <form method="post" action="/gym/delete/{{ w.id }}">
+                  <input type="hidden" name="lang" value="{{ lang }}">
+                  <input type="hidden" name="theme" value="{{ theme }}">
+                  <button type="submit" class="btn btn-danger btn-sm">{{ t('delete') }}</button>
+                </form>
+              </td>
+            </tr>
+          {% else %}
+            <tr><td colspan="4">{{ t('no_workouts') }}</td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} 

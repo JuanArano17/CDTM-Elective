@@ -1,0 +1,82 @@
+{% extends 'base_fastapi.html' %}
+{% block content %}
+<h2>{{ t('diet_program') }}</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <form method="post" action="/diet/add">
+          <input type="hidden" name="lang" value="{{ lang }}">
+          <input type="hidden" name="theme" value="{{ theme }}">
+          <div class="mb-2">
+            <label class="form-label">{{ t('track_date') }}</label>
+            <input type="date" name="date" class="form-control" required>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">{{ t('calories') }}</label>
+            <input type="number" name="calories" class="form-control" min="0" required>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">{{ t('protein') }}</label>
+            <input type="number" name="protein" class="form-control" min="0" step="0.1" required>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">{{ t('carbs') }}</label>
+            <input type="number" name="carbs" class="form-control" min="0" step="0.1" required>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">{{ t('fats') }}</label>
+            <input type="number" name="fats" class="form-control" min="0" step="0.1" required>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">{{ t('food_log') }}</label>
+            <input type="text" name="food_log" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">{{ t('add_food') }}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ t('diet_program') }}</h5>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>{{ t('track_date') }}</th>
+              <th>{{ t('calories') }}</th>
+              <th>{{ t('protein') }}</th>
+              <th>{{ t('carbs') }}</th>
+              <th>{{ t('fats') }}</th>
+              <th>{{ t('food_log') }}</th>
+              <th>{{ t('actions') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for d in diets %}
+            <tr>
+              <td>{{ d.date }}</td>
+              <td>{{ d.calories }}</td>
+              <td>{{ d.protein }}</td>
+              <td>{{ d.carbs }}</td>
+              <td>{{ d.fats }}</td>
+              <td>{{ d.food_log }}</td>
+              <td>
+                <form method="post" action="/diet/delete/{{ d.id }}">
+                  <input type="hidden" name="lang" value="{{ lang }}">
+                  <input type="hidden" name="theme" value="{{ theme }}">
+                  <button type="submit" class="btn btn-danger btn-sm">{{ t('delete') }}</button>
+                </form>
+              </td>
+            </tr>
+          {% else %}
+            <tr><td colspan="7">{{ t('no_workouts') }}</td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} 

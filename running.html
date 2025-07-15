@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ t('running') }}</h2>
+<div class="row">
+  <div class="col-md-6">
+    <form method="post">
+      <div class="mb-2">
+        <label class="form-label">{{ t('run_date') }}</label>
+        <input type="date" name="date" class="form-control" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">{{ t('distance') }}</label>
+        <input type="number" name="distance" class="form-control" min="0" step="0.01" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">{{ t('duration') }}</label>
+        <input type="number" name="duration" class="form-control" min="1" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">{{ t('pace') }}</label>
+        <input type="number" name="pace" class="form-control" min="0" step="0.01" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">{{ t('calories_burned') }}</label>
+        <input type="number" name="calories_burned" class="form-control" min="0" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">{{ t('notes') }}</label>
+        <input type="text" name="notes" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">{{ t('add_workout') }}</button>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h4>{{ t('running') }}</h4>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>{{ t('run_date') }}</th>
+          <th>{{ t('distance') }}</th>
+          <th>{{ t('duration') }}</th>
+          <th>{{ t('pace') }}</th>
+          <th>{{ t('calories_burned') }}</th>
+          <th>{{ t('notes') }}</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in data['running_logs']|sort(attribute='date', reverse=true) %}
+        <tr>
+          <td>{{ r['date'] }}</td>
+          <td>{{ r['distance'] }}</td>
+          <td>{{ r['duration'] }}</td>
+          <td>{{ r['pace'] }}</td>
+          <td>{{ r['calories_burned'] }}</td>
+          <td>{{ r['notes'] }}</td>
+          <td>
+            <form method="post" action="/delete/running_logs/{{ r['id'] }}" style="display:inline;">
+              <button type="submit" class="btn btn-danger btn-sm">{{ t('delete') }}</button>
+            </form>
+          </td>
+        </tr>
+        {% else %}
+        <tr><td colspan="7">{{ t('no_workouts') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %} 

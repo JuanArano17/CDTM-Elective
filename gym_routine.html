@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ t('gym_routine') }}</h2>
+<div class="row">
+  <div class="col-md-6">
+    <form method="post">
+      <div class="mb-2">
+        <label class="form-label">{{ t('workout_date') }}</label>
+        <input type="date" name="date" class="form-control" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">{{ t('start_time') }}</label>
+        <input type="time" name="start_time" class="form-control" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">{{ t('end_time') }}</label>
+        <input type="time" name="end_time" class="form-control" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">{{ t('duration_minutes') }}</label>
+        <input type="number" name="duration" class="form-control" min="1" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">{{ t('calories_burned') }}</label>
+        <input type="number" name="calories_burned" class="form-control" min="0" required>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">{{ t('notes') }}</label>
+        <input type="text" name="notes" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">{{ t('add_workout') }}</button>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h4>{{ t('recent_workouts') }}</h4>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>{{ t('workout_date') }}</th>
+          <th>{{ t('duration_minutes') }}</th>
+          <th>{{ t('calories_burned') }}</th>
+          <th>{{ t('notes') }}</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for w in data['gym_workouts']|sort(attribute='date', reverse=true) %}
+        <tr>
+          <td>{{ w['date'] }}</td>
+          <td>{{ w['duration'] }}</td>
+          <td>{{ w['calories_burned'] }}</td>
+          <td>{{ w['notes'] }}</td>
+          <td>
+            <form method="post" action="/delete/gym_workouts/{{ w['id'] }}" style="display:inline;">
+              <button type="submit" class="btn btn-danger btn-sm">{{ t('delete') }}</button>
+            </form>
+          </td>
+        </tr>
+        {% else %}
+        <tr><td colspan="5">{{ t('no_workouts') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %} 

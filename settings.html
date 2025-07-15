@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ t('settings') }}</h2>
+<div class="card">
+  <div class="card-body">
+    <p><strong>{{ t('language') }}:</strong> {{ lang }}</p>
+    <p><strong>{{ t('theme') }}:</strong> {{ theme }}</p>
+    <p>{{ t('language') }} and {{ t('theme') }} can be changed using the selectors in the navigation bar above.</p>
+  </div>
+</div>
+{% endblock %} 
