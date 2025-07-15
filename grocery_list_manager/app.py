@@ -67,14 +67,17 @@ else:
                         grocery_list["name"] = new_name.strip() or grocery_list["name"]
                         update_last_edited(selected_list_id)
                         st.session_state[f"edit_name_{selected_list_id}"] = False
+                        st.experimental_rerun()
                 with cancel:
                     if st.button("❌ Cancel", key=f"cancel_name_{selected_list_id}"):
                         st.session_state[f"edit_name_{selected_list_id}"] = False
+                        st.experimental_rerun()
             else:
                 st.markdown(f"## {grocery_list['name']}")
         with col2:
             if st.button("✏️", key=f"edit_btn_{selected_list_id}"):
                 st.session_state[f"edit_name_{selected_list_id}"] = True
+                st.experimental_rerun()
         with col3:
             if st.button("🗑️ Delete List", key=f"delete_list_{selected_list_id}"):
                 del lists[selected_list_id]
