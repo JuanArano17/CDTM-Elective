@@ -46,7 +46,10 @@ def save_lists_to_csv(lists):
 def load_lists_from_csv():
     if not os.path.exists(LISTS_CSV) or os.path.getsize(LISTS_CSV) == 0:
         return {}
-    df = pd.read_csv(LISTS_CSV)
+    try:
+        df = pd.read_csv(LISTS_CSV)
+    except pd.errors.EmptyDataError:
+        return {}
     lists = {}
     for _, row in df.iterrows():
         list_id = str(row["list_id"])
