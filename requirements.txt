@@ -5,3 +5,4 @@ plotly>=5.0.0
 Pillow>=8.0.0 
 pint 
 requests 
+pyttsx3 

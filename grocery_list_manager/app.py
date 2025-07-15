@@ -5,6 +5,7 @@ from pint import UnitRegistry
 ureg = UnitRegistry()
 import requests
 import random
+import pyttsx3
 
 st.set_page_config(page_title="Groli - Grocery List Manager", layout="wide")
 
@@ -107,6 +108,21 @@ else:
                 with st.expander("Show price breakdown"):
                     for name, price in price_details:
                         st.write(f"{name}: ${price:.2f}")
+                # --- Accessibility: Read Out List ---
+                def get_list_text():
+                    if not grocery_list["items"]:
+                        return "Your grocery list is empty."
+                    lines = []
+                    for item in grocery_list["items"]:
+                        if not item["checked"]:
+                            lines.append(f"{item['quantity']} {item['unit']} of {item['name']} in {item['area']}")
+                    if not lines:
+                        return "All items are checked off."
+                    return "You need to buy: " + ", ".join(lines) + "."
+                if st.button("🔊 Read Out List", key=f"readout_{selected_list_id}"):
+                    engine = pyttsx3.init()
+                    engine.say(get_list_text())
+                    engine.runAndWait()
         with col2:
             if st.button("✏️", key=f"edit_btn_{selected_list_id}"):
                 st.session_state[f"edit_name_{selected_list_id}"] = True
