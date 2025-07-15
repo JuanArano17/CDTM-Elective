@@ -3,6 +3,8 @@ from datetime import datetime
 from collections import defaultdict
 from pint import UnitRegistry
 ureg = UnitRegistry()
+import requests
+import random
 
 st.set_page_config(page_title="Groli - Grocery List Manager", layout="wide")
 
@@ -58,6 +60,31 @@ else:
         st.error("Selected list not found.")
     else:
         grocery_list = lists[selected_list_id]
+        # --- Price Estimation ---
+        def fetch_price(item_name, quantity, unit):
+            # Example API endpoint (replace with real one if available)
+            api_url = f"https://api.example.com/grocery_price?item={item_name}&unit={unit}"
+            try:
+                response = requests.get(api_url, timeout=2)
+                if response.status_code == 200:
+                    data = response.json()
+                    # Assume API returns price per unit
+                    price_per_unit = data.get("price_per_unit", None)
+                    if price_per_unit is not None:
+                        return price_per_unit * quantity
+            except Exception:
+                pass
+            # Fallback: random price for demo
+            return round(random.uniform(0.5, 3.0) * quantity, 2)
+
+        estimated_total = 0.0
+        price_details = []
+        for item in grocery_list["items"]:
+            if not item["checked"]:
+                price = fetch_price(item["name"], item["quantity"], item["unit"])
+                estimated_total += price
+                price_details.append((item["name"], price))
+
         # --- Editable List Name ---
         col1, col2, col3 = st.columns([6,1,1])
         with col1:
@@ -76,6 +103,10 @@ else:
                         st.experimental_rerun()
             else:
                 st.markdown(f"## {grocery_list['name']}")
+                st.markdown(f"**Estimated price: ${estimated_total:.2f}**")
+                with st.expander("Show price breakdown"):
+                    for name, price in price_details:
+                        st.write(f"{name}: ${price:.2f}")
         with col2:
             if st.button("✏️", key=f"edit_btn_{selected_list_id}"):
                 st.session_state[f"edit_name_{selected_list_id}"] = True
