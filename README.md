@@ -16,8 +16,6 @@ A web application to help people with celiac disease discover, track, and plan b
    ```
 2. Run the app:
    ```bash
-   python celiac_nutrition_app.py
+   streamlit run app.py
    ```
-3. Open your browser at [http://127.0.0.1:5000](http://127.0.0.1:5000)
-
 No login or installation required. All data is stored in memory during the session.
